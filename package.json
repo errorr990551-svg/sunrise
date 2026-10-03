@@ -1,0 +1,13 @@
+{
+  "name": "sunrise-industries",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sunrise Industries - SS Nipples & CNC Precision Components React Web Application",
+  "scripts": {
+    "install": "npm install --prefix frontend",
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend",
+    "start": "npm run dev --prefix frontend"
+  }
+}
