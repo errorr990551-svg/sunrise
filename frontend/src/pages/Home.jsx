@@ -17,46 +17,30 @@ const homeFaqs = [
   { q: 'Where are you located?', a: '125-41, Small Scale Co Op Ind Estate Ltd, B/H Ajit Mill, Rakhiyal Road, Ahmedabad 380023, Gujarat, India.' }
 ];
 
-const tnCities = [
-  { name: 'Chennai', slug: 'chennai', highlight: 'Port & Automotive Hub' },
-  { name: 'Coimbatore', slug: 'coimbatore', highlight: 'Pump & Motor Manufacturing' },
-  { name: 'Hosur', slug: 'hosur', highlight: 'Auto, EV & Electronics Corridor' },
-  { name: 'Tiruppur', slug: 'tiruppur', highlight: 'Knitwear & Dyeing Units' },
-  { name: 'Salem', slug: 'salem', highlight: 'Kitchen Equipment & SS Trade' },
-  { name: 'Madurai', slug: 'madurai', highlight: 'Hotels, Hospitals & MEP' },
-  { name: 'Tiruchirappalli', slug: 'tiruchirappalli', highlight: 'Boiler Ancillaries & Precision' },
-  { name: 'Erode', slug: 'erode', highlight: 'Turmeric Processing & Weaving' },
-  { name: 'Thoothukudi', slug: 'thoothukudi', highlight: 'Marine-Grade Salt & Port' },
-  { name: 'Namakkal', slug: 'namakkal', highlight: 'Truck Body & Borewell Rigs' },
-];
-
 export default function Home() {
   return (
     <>
-      {/* Section 1: Hero */}
+      {/* Section 1: Hero Banner */}
       <section className="hero">
         <div className="container">
           <div className="hero-content">
             <div className="hero-tagline">
               <h2>SS Nipple Manufacturer, Stockist and Exporter</h2>
             </div>
-            <h1>Stainless Steel Nipples, Stocked and Made to Order in Ahmedabad</h1>
+            <h1>Stainless Steel Nipples, Stocked and Made to Order in India</h1>
             <p className="hero-subhead">
               Hex, barrel, close, reducing and hose nipples in SS 304 and SS 316, plus MS and brass. Standard sizes from stock, special sizes machined to your drawing.
             </p>
             <p className="hero-desc">
-              A nipple is a small part that causes big problems when it's wrong. A thread that doesn't match, a grade that corrodes in six months, a length that leaves no room for a spanner: any of these can stop a line or a production shift. Sunrise Industries has been making and supplying stainless steel nipples from Ahmedabad since 2010, and we treat the small part with the care the big system deserves.
+              A nipple is a small part that causes big problems when it's wrong. A thread that doesn't match, a grade that corrodes in six months, a length that leaves no room for a spanner: any of these can stop a line or a production shift. Sunrise Industries has been manufacturing and supplying stainless steel nipples in Ahmedabad for all over india since 2010, and we treat the small part with the care the big system deserves.
             </p>
 
             <div className="hero-actions">
               <a href="#quote-form" className="btn btn-primary btn-lg">
                 Get a Nipple Quote <span className="btn-arrow">&rarr;</span>
               </a>
-              <a href="#quote-form" className="btn btn-outline-white btn-lg">
-                Send Your Drawing
-              </a>
-              <a href="tel:+916264131446" className="btn btn-outline-white btn-lg">
-                Call +91 62641 31446
+              <a href="#nipple-range" className="btn btn-outline-white btn-lg">
+                View All Products &rarr;
               </a>
             </div>
           </div>
@@ -97,7 +81,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: What is an SS nipple */}
+      {/* Section 3: Industrial Fundamentals (Paragraph left margin, Pic right side) */}
       <section className="section" id="what-is-nipple">
         <div className="container">
           <div className="section-header">
@@ -105,31 +89,53 @@ export default function Home() {
             <h2>What Is an SS Nipple, and Why Does It Matter?</h2>
             <h3>A short piece of pipe that joins two fittings, and holds the whole joint together</h3>
           </div>
-          <div style={{ maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.8' }}>
-            <p>
-              A stainless steel pipe nipple is a short length of pipe, threaded on one or both ends, that connects two other fittings such as valves, couplings, elbows, tees, pumps or tanks. You'll find them on water lines, steam headers, compressed-air drops, chemical dosing lines, gauge connections and hundreds of other places inside a plant.
-            </p>
-            <p style={{ marginTop: '1rem' }}>
-              People choose stainless for nipples because the part sits in the wet, hot or corrosive spots of a system, where mild steel rusts and galvanised steel flakes. A stainless nipple lasts longer, stays cleaner and doesn't contaminate the fluid passing through it. That matters for food, dairy, pharma and water applications, and for any line where a leak means downtime.
-            </p>
-            <p style={{ marginTop: '1rem', fontWeight: 600, color: 'var(--text-dark)' }}>
-              At Sunrise, nipples are our main product. We hold stock in the common sizes, and because we run our own CNC machining, we can make the uncommon ones too.
-            </p>
+
+          <div className="fundamentals-two-col">
+            <div className="fundamentals-text">
+              <p>
+                A stainless steel pipe nipple is a short length of pipe, threaded on one or both ends, that connects two other fittings such as valves, couplings, elbows, tees, pumps or tanks. You'll find them on water lines, steam headers, compressed-air drops, chemical dosing lines, gauge connections and hundreds of other places inside an industrial plant.
+              </p>
+              <p style={{ marginTop: '1.25rem' }}>
+                People choose stainless for nipples because the part sits in the wet, hot or corrosive spots of a system, where mild steel rusts and galvanised steel flakes. A stainless nipple lasts longer, stays cleaner and doesn't contaminate the fluid passing through it. That matters for food, dairy, pharma and water applications, and for any line where a leak means expensive downtime.
+              </p>
+              <p style={{ marginTop: '1.25rem', fontWeight: 600, color: 'var(--text-dark)' }}>
+                At Sunrise, nipples are our primary product line. We hold extensive ready stock in common sizes, and because we operate our own precision CNC machining shop, we manufacture uncommon and drawing-specific nipples under the same roof.
+              </p>
+            </div>
+
+            <div className="fundamentals-photo-card">
+              <img 
+                src="/assets/images/Stainless Steel Pipe Fittings Collection.png" 
+                alt="Stainless Steel Pipe Fittings Collection - Sunrise Industries" 
+                loading="lazy"
+              />
+              <span className="photo-caption-badge">Full Stainless Steel Fitting &amp; Joint Range</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 4: The range */}
+      {/* Section 4: Product Range (From One Manufacturer + Right side View All Products button) */}
       <section className="section section-light" id="nipple-range">
         <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Product Range</span>
-            <h2>Every Type of SS Nipple, From One Supplier</h2>
-            <h3>Choose by how the joint is built, not just by size</h3>
+          <div className="section-header-split">
+            <div>
+              <span className="tagline-badge">Product Range</span>
+              <h2>Every Type of SS Nipple, From One Manufacturer</h2>
+              <h3 style={{ margin: 0 }}>Choose by how the joint is built, not just by size</h3>
+            </div>
+            <div>
+              <a href="#specifications" className="btn btn-outline">
+                View All Products &rarr;
+              </a>
+            </div>
           </div>
 
           <div className="cards-grid">
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/SS Hex Nipple.png" alt="SS Hex Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Hex Nipple</h3>
               <p className="feature-card-desc">
                 A hexagon in the middle lets you grip it with a spanner while tightening, so the thread seats properly without damaging the surface. Available as equal and reducing hex nipples.
@@ -138,49 +144,67 @@ export default function Home() {
             </div>
 
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/ss barrel nipple.png" alt="SS Barrel Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Barrel Nipple</h3>
               <p className="feature-card-desc">
-                Threaded at both ends with a plain, unthreaded section in the centre. That plain section gives you reach between fittings and a surface to hold.
+                Threaded at both ends with a plain, unthreaded section in the centre. That plain section gives you reach between fittings and a clean surface to hold during installation.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
 
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/SS Close Nipple.png" alt="SS Close Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Close Nipple</h3>
               <p className="feature-card-desc">
-                Threaded along its entire length, so the fittings you connect sit almost touching. Ideal for tight spaces like compact manifolds and skids.
+                Threaded along its entire length, so the fittings you connect sit almost touching. Ideal for tight spaces like compact manifolds, gauge clusters and skids.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
 
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/SS Reducing Nipple.png" alt="SS Reducing Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Reducing Nipple</h3>
               <p className="feature-card-desc">
-                Different thread sizes on each end (e.g. ½" to ¾"). Used where a line steps up or down in size at pumps, valves or instrument ports.
+                Different thread sizes on each end (e.g. ½" to ¾"). Used where a line steps up or down in size at pumps, valves or instrument ports without adding extra reducers.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
 
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/7a8533f9-c0ee-4957-8664-a72711dc71b7.png" alt="SS Hose Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Hose Nipple</h3>
               <p className="feature-card-desc">
-                A barbed or ribbed end that grips a flexible hose, with a threaded end for the rigid connection. Common in water and utility hookups.
+                A barbed or ribbed end that securely grips flexible hose, paired with a precision threaded end for the rigid connection. Common in water, air and utility hookups.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
 
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/Custom CNC Nipples.png" alt="Long & Custom Nipples" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">Long &amp; Custom Nipples</h3>
               <p className="feature-card-desc">
-                Special lengths, unusual thread combinations, non-standard hex sizes and drawing-specific parts machined to order.
+                Special lengths, mixed thread combinations, non-standard hex across-flats sizes and drawing-specific parts machined to precise engineering tolerances.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
 
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/nipples-range.jpg" alt="MS & Brass Nipples" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">MS &amp; Brass Nipples</h3>
               <p className="feature-card-desc">
-                Mild steel nipples for dry, painted, low-cost lines. Brass nipples for water, gas and electrical hardware.
+                Mild steel nipples for dry, painted, low-cost structural lines. Brass nipples for water, gas and electrical hardware where non-sparking or malleability is required.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
@@ -194,406 +218,697 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CAD Prototype to Production Banner */}
-      <section className="cad-banner">
+      {/* Section 5: Engineering Excellence (Content on one side, Video holder on another) */}
+      <section className="section section-dark" id="cad-prototype">
         <div className="container">
-          <div className="cad-banner-content">
-            <span className="cad-badge">Engineering Excellence</span>
-            <h2>Seamless Transition from Prototype to Production</h2>
-            <p>
-              Our team of engineering and manufacturing experts have experience creating precision stainless and turned components for a wide variety of industries worldwide.
-            </p>
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <a href="#quote-form" className="btn btn-primary btn-lg">
-                View Products &rarr;
-              </a>
-              <a href="#quote-form" className="btn btn-outline-white btn-lg">
-                Get Quote Now &rarr;
-              </a>
+          <div className="engineering-split-grid">
+            <div className="engineering-content">
+              <span className="tagline-badge" style={{ color: 'var(--primary)', background: 'rgba(245, 166, 35, 0.15)' }}>
+                Engineering Excellence
+              </span>
+              <h2>Seamless Transition from Prototype to Production</h2>
+              <p>
+                Need a custom SS nipple that isn't in any catalogue? Our engineering team in Ahmedabad takes your drawing or sample from first prototype to full-scale production, with material selection, CNC machining, threading and inspection all done under one roof. We machine hex, barrel, close and reducing nipples in SS 304 and SS 316, in BSP, BSPT and NPT threads, and in special lengths, mixed threads and non-standard hex sizes. With 10+ production lines, an ISO 9001:2015 certified quality system and exports to 5+ countries, we deliver precision stainless steel and turned components that fit the first time and stay consistent from batch to batch.
+              </p>
+
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <a href="#quote-form" className="btn btn-primary btn-lg">
+                  Request Your Custom Order &rarr;
+                </a>
+                <a href="#quote-form" className="btn btn-outline-white btn-lg">
+                  Get Quote Now &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div className="video-holder-card">
+              <div 
+                className="video-screen"
+                style={{ backgroundImage: `url('/assets/images/custom fabrication.png')` }}
+              >
+                <div className="video-play-btn" title="Watch CNC Lathe Machining Demonstration">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="video-card-footer">
+                <div className="video-info-title">
+                  <span>Precision CNC Machining Facility</span>
+                </div>
+                <span className="video-duration-tag">01:45 &bull; 1080p HD</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 5: Specifications */}
+      {/* Section 6: Technical Data (Proper Table with borders + Two product photos on right) */}
       <section className="section" id="specifications">
         <div className="container">
           <div className="section-header">
             <span className="tagline-badge">Technical Data</span>
             <h2>SS Nipple Specifications</h2>
-            <h3>What we offer, in one table</h3>
+            <h3>What we offer, in one clear table</h3>
           </div>
 
-          <div className="table-container">
-            <table className="specs-table">
-              <thead>
-                <tr>
-                  <th>Parameter</th>
-                  <th>What we offer</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Material</strong></td>
-                  <td>SS 304, SS 304L, SS 316, SS 316L; mild steel; brass</td>
-                </tr>
-                <tr>
-                  <td><strong>Types</strong></td>
-                  <td>Hex, barrel, close, reducing, hose, custom</td>
-                </tr>
-                <tr>
-                  <td><strong>Thread standards</strong></td>
-                  <td>BSP, BSPT (tapered), NPT</td>
-                </tr>
-                <tr>
-                  <td><strong>Wall thickness</strong></td>
-                  <td>Schedule 40 and Schedule 80</td>
-                </tr>
-                <tr>
-                  <td><strong>Nominal sizes</strong></td>
-                  <td>⅛" to 4" (standard and custom bores)</td>
-                </tr>
-                <tr>
-                  <td><strong>Length</strong></td>
-                  <td>Standard lengths and cut-to-length as specified</td>
-                </tr>
-                <tr>
-                  <td><strong>Construction</strong></td>
-                  <td>Seamless or welded pipe stock</td>
-                </tr>
-                <tr>
-                  <td><strong>Surface finish</strong></td>
-                  <td>Plain, polished, pickled or as specified</td>
-                </tr>
-                <tr>
-                  <td><strong>Referenced standards</strong></td>
-                  <td>ASTM A733, ASME B1.20.1</td>
-                </tr>
-                <tr>
-                  <td><strong>Certification</strong></td>
-                  <td>Material test certificates on request</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="specs-split-grid">
+            <div>
+              <div style={{ overflowX: 'auto' }}>
+                <table className="specs-table-bordered">
+                  <thead>
+                    <tr>
+                      <th style={{ width: '38%' }}>Parameter</th>
+                      <th>What We Offer</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Material Grades</strong></td>
+                      <td>SS 304, SS 304L, SS 316, SS 316L, Mild Steel, Brass</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Nipple Configurations</strong></td>
+                      <td>Hex Nipple, Barrel Nipple, Close Nipple, Reducing Nipple, Hose Barb, Custom CNC</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Thread Standards</strong></td>
+                      <td>BSP (BS 21 parallel/taper), BSPT (55° tapered), NPT (ASME B1.20.1 60° tapered)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Wall Thickness Classes</strong></td>
+                      <td>Schedule 40 (Standard) and Schedule 80 (Heavy Duty Extra Strong)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Nominal Bore Sizes</strong></td>
+                      <td>⅛" up to 4" (standard stock); custom bores machined to order</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Length Variations</strong></td>
+                      <td>Standard catalogue lengths and custom cut-to-length as specified</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Raw Material Form</strong></td>
+                      <td>Seamless ASTM A312 pipe stock, welded pipe stock or solid hex bar</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Surface Finishes</strong></td>
+                      <td>Pickled &amp; passivated, natural machined, mirror buffed, electro-polished</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Applicable Standards</strong></td>
+                      <td>ASTM A733, ASME B1.20.1, BS 21, DIN 2982, ISO 9001:2015</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Inspection &amp; Test Certificates</strong></td>
+                      <td>EN 10204 3.1 Material Test Certificate, NABL lab test report on request</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style={{ marginTop: '1.25rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
+                If your required size or thread angle is non-standard, simply ask. Our in-house CNC shop is specifically equipped to machine custom tolerances.
+              </p>
+            </div>
+
+            <div className="specs-photos-stack">
+              <div className="specs-photo-card">
+                <img src="/assets/images/nipples-range.jpg" alt="SS 304 and 316 Nipple Stock Range" loading="lazy" />
+                <h4>Standard Stocked Sizes (⅛" to 4")</h4>
+                <p>SS 304 &amp; SS 316 with stamped grade &amp; thread identification.</p>
+              </div>
+
+              <div className="specs-photo-card">
+                <img src="/assets/images/Custom CNC Nipples.png" alt="Precision CNC Machined Nipples" loading="lazy" />
+                <h4>Custom Machined &amp; High-Pressure Types</h4>
+                <p>Schedule 80 heavy wall, custom threads, and non-standard hexes.</p>
+              </div>
+            </div>
           </div>
-          <p style={{ marginTop: '1.25rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-            If your size or thread isn't listed, ask. Our CNC machining capacity is how we handle the "can you make this one?" requests.
-          </p>
         </div>
       </section>
 
-      {/* Section 6: Choosing the right nipple */}
-      <section className="section section-light">
+      {/* Section 7: Buying Guide (How to Get Started - Iota Flow Style) */}
+      <section className="section section-light" id="how-to-get-started">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header text-center">
             <span className="tagline-badge">Buying Guide</span>
-            <h2>How to Choose the Right SS Nipple: Four Questions</h2>
-            <h3>Answer these and your order almost writes itself</h3>
+            <h2>How to Get Started with Your SS Nipple Requirement</h2>
+            <h3>A structured 4-step workflow from engineering spec to rapid dispatch</h3>
           </div>
 
-          <div className="four-questions-grid">
-            <div className="question-card">
-              <div className="question-num">01</div>
-              <h3 className="question-title">What grade of stainless?</h3>
-              <p className="question-text">
-                SS 304 handles water, steam, air, food contact and general wet areas well. SS 316 and 316L contain molybdenum, which helps them resist salt, chlorides, dyes, acids and many chemicals. If your line is near the coast, carries brine or runs through a chemical process, go for 316. If clean water or air, 304 is usually enough and costs less.
+          <div className="iota-steps-flow">
+            <div className="iota-step-card">
+              <div className="iota-step-top">
+                <span className="iota-step-num">01</span>
+                <div className="iota-step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 className="iota-step-title">Specify Grade &amp; Duty</h3>
+              <p className="iota-step-desc">
+                Evaluate your pipeline environment. Select SS 304 for general utilities, steam, water and food lines, or SS 316 for salt, coastal and harsh chemical media.
               </p>
+              <div className="iota-step-connector">&rarr;</div>
             </div>
 
-            <div className="question-card">
-              <div className="question-num">02</div>
-              <h3 className="question-title">Which thread?</h3>
-              <p className="question-text">
-                This is where most wrong orders happen. NPT threads have a 60° angle, BSP threads have 55°. BSPT and NPT are both tapered but are not interchangeable, even when the size looks the same. Parallel BSP (BSPP) seals differently from tapered threads. Tell us what your mating fitting is, and we'll match it.
+            <div className="iota-step-card">
+              <div className="iota-step-top">
+                <span className="iota-step-num">02</span>
+                <div className="iota-step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 className="iota-step-title">Match Thread &amp; Wall</h3>
+              <p className="iota-step-desc">
+                Confirm thread family: BSP (55° British Standard) vs NPT (60° American Taper). Pick Schedule 40 standard or Schedule 80 heavy duty wall.
               </p>
+              <div className="iota-step-connector">&rarr;</div>
             </div>
 
-            <div className="question-card">
-              <div className="question-num">03</div>
-              <h3 className="question-title">How thick is the wall?</h3>
-              <p className="question-text">
-                Schedule 40 is standard wall and suits most utility lines. Schedule 80 has a thicker wall for higher pressure or tougher duty. If you're unsure, share your operating pressure and we'll recommend.
+            <div className="iota-step-card">
+              <div className="iota-step-top">
+                <span className="iota-step-num">03</span>
+                <div className="iota-step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 className="iota-step-title">Share Drawing or Sizes</h3>
+              <p className="iota-step-desc">
+                Select your required lengths and hex dimensions, or share your 2D/3D CAD drawing or sample part for rapid prototype turnaround.
               </p>
+              <div className="iota-step-connector">&rarr;</div>
             </div>
 
-            <div className="question-card">
-              <div className="question-num">04</div>
-              <h3 className="question-title">Which type and length?</h3>
-              <p className="question-text">
-                Hex when you need spanner grip. Barrel when you need reach. Close when space is tight. Reducing when sizes change. Not sure? Send us a clear photo of the mating part and size marking.
+            <div className="iota-step-card">
+              <div className="iota-step-top">
+                <span className="iota-step-num">04</span>
+                <div className="iota-step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 className="iota-step-title">Quote &amp; Dispatch</h3>
+              <p className="iota-step-desc">
+                Receive clear factory-direct pricing with chemical MTC certificates. In-stock orders ship immediately; custom CNC runs dispatch in 3-7 days.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 7: Material guide */}
-      <section className="section">
+      {/* Section 8: Metallurgy Guide (Centered Content with Proper Table) */}
+      <section className="section" id="metallurgy-guide">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header text-center">
             <span className="tagline-badge">Metallurgy Guide</span>
             <h2>SS 304, SS 316, Mild Steel or Brass Nipples: Which One?</h2>
-            <h3>Match the material to the environment, not just the budget</h3>
+            <h3>Match the material to the environment, not just the upfront budget</h3>
           </div>
 
-          <div className="table-container">
-            <table className="specs-table">
-              <thead>
-                <tr>
-                  <th>Material</th>
-                  <th>Works well in</th>
-                  <th>Not ideal for</th>
-                  <th>Typical use</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>SS 304</strong></td>
-                  <td>Water, steam, air, food, dairy, indoor wet areas</td>
-                  <td>Salt water, strong chlorides, harsh chemicals</td>
-                  <td>General plant pipework, kitchens, utilities</td>
-                </tr>
-                <tr>
-                  <td><strong>SS 304L</strong></td>
-                  <td>Same as 304, easier to weld</td>
-                  <td>Same as 304</td>
-                  <td>Welded pipe assemblies</td>
-                </tr>
-                <tr>
-                  <td><strong>SS 316</strong></td>
-                  <td>Marine, coastal, chemical, dye houses</td>
-                  <td>Very strong acids (check chart)</td>
-                  <td>Process lines, outdoor and coastal use</td>
-                </tr>
-                <tr>
-                  <td><strong>SS 316L</strong></td>
-                  <td>As 316, better for welded work</td>
-                  <td>Same as 316</td>
-                  <td>Welded chemical and marine assemblies</td>
-                </tr>
-                <tr>
-                  <td><strong>Mild steel</strong></td>
-                  <td>Dry, painted, low-cost lines</td>
-                  <td>Wet or corrosive areas</td>
-                  <td>Dry compressed air, structural frames</td>
-                </tr>
-                <tr>
-                  <td><strong>Brass</strong></td>
-                  <td>Water, gas, electrical hardware</td>
-                  <td>Ammonia, strong acids</td>
-                  <td>Plumbing, pneumatics, electrical fittings</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p style={{ marginTop: '1.25rem', fontStyle: 'italic', color: 'var(--text-muted)' }}>
-            A practical rule: a cheaper nipple that fails after a year costs more than a stainless one that lasts ten. For anything in a wet, hot or chemical line, we'd rather quote you the right grade than the lowest price.
-          </p>
-        </div>
-      </section>
+          <div className="metallurgy-center-wrap">
+            <div style={{ overflowX: 'auto' }}>
+              <table className="metallurgy-table-center">
+                <thead>
+                  <tr>
+                    <th>Material</th>
+                    <th>Works Well In</th>
+                    <th>Not Ideal For</th>
+                    <th>Typical Plant Applications</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span className="badge badge-304">SS 304</span></td>
+                    <td>Water, steam, air, dairy, food contact, indoor wet areas</td>
+                    <td>Salt water, strong chlorides, high acid lines</td>
+                    <td>General utility lines, brewery, kitchen equipment</td>
+                  </tr>
+                  <tr>
+                    <td><span className="badge badge-304">SS 304L</span></td>
+                    <td>Same as 304 with superior weldability &amp; low carbon</td>
+                    <td>Same as 304</td>
+                    <td>Welded manifold pipe assemblies &amp; skids</td>
+                  </tr>
+                  <tr>
+                    <td><span className="badge badge-316">SS 316</span></td>
+                    <td>Marine, coastal atmosphere, chemical dosing, dye houses</td>
+                    <td>Concentrated boiling nitric/hydrochloric acid</td>
+                    <td>Chemical process lines, coastal &amp; offshore piping</td>
+                  </tr>
+                  <tr>
+                    <td><span className="badge badge-316">SS 316L</span></td>
+                    <td>As 316, resists carbide precipitation in welded joints</td>
+                    <td>Extremely strong hot acids (check charts)</td>
+                    <td>Pharmaceutical sanitary systems &amp; marine skids</td>
+                  </tr>
+                  <tr>
+                    <td><span className="badge badge-ms">Mild Steel</span></td>
+                    <td>Dry compressed air, structural frames, low-cost oil lines</td>
+                    <td>Wet, steam or corrosive environments</td>
+                    <td>Hydraulic oil return, dry air headers, machinery frames</td>
+                  </tr>
+                  <tr>
+                    <td><span className="badge badge-brass">Brass</span></td>
+                    <td>Potable water, low-pressure gas, pneumatic instrumentation</td>
+                    <td>Ammonia, strong acids, galvanic couples with SS</td>
+                    <td>Domestic plumbing, pneumatic actuators, gas regulators</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-      {/* Section 8: Fitting and installation tips */}
-      <section className="section section-light">
-        <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Best Practices</span>
-            <h2>Fitting SS Nipples Without Leaks</h2>
-            <h3>Five habits that save plant hours</h3>
-          </div>
-
-          <ul className="tips-list">
-            <li><strong>Use thread sealant:</strong> PTFE tape or a suitable paste on tapered threads gives a better seal and eases assembly.</li>
-            <li><strong>Don't over-tighten:</strong> Tapered threads seal by wedging. Extra force doesn't improve the seal and can crack a fitting or gall the thread.</li>
-            <li><strong>Match the thread family:</strong> Don't force BSPT into NPT. Even if it starts, it will leak.</li>
-            <li><strong>Support the pipe:</strong> A long nipple with a heavy valve on the end is a lever. Add a support bracket.</li>
-            <li><strong>Keep threads clean:</strong> Dirt and swarf from cutting can scratch threads and cause leaks.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Section 9: Custom nipples */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Custom Fabrication</span>
-            <h2>Can't Find Your Size? We Machine It</h2>
-            <h3>Custom-length, special-thread and unusual-hex nipples made to drawing</h3>
-          </div>
-          <p style={{ maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.8' }}>
-            Catalogue lists only go so far. Because Sunrise also runs CNC machining, we can make nipples outside standard ranges: special lengths, mixed thread combinations, non-standard hex sizes and tight tolerances, in stainless steel, mild steel, brass and aluminium.
-          </p>
-
-          <ul style={{ maxWidth: '850px', margin: '1.5rem auto', lineHeight: '1.8', paddingLeft: '1.5rem' }}>
-            <li>A nipple with BSPT on one end and NPT on the other, to connect imported equipment to Indian lines.</li>
-            <li>Extra-long barrel nipples for equipment that needs reach.</li>
-            <li>Machined hex nipples with specific across-flats dimensions.</li>
-            <li>Prototype batches of a new design before a production order.</li>
-            <li>OEM parts needed in repeat batches.</li>
-          </ul>
-          
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <a href="#quote-form" className="btn btn-primary btn-lg">
-              Upload Your Drawing &rarr;
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 10: Complete the line */}
-      <section className="section section-light">
-        <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Complementary Products</span>
-            <h2>Couplings, Flanges, Pipes and More, Ordered Together</h2>
-            <h3>One supplier for the whole joint, not just the nipple</h3>
-          </div>
-          <div style={{ maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.8' }}>
-            <p>Most jobs need more than a nipple. We also supply:</p>
-            <ul style={{ margin: '1rem 0 1.5rem 1.5rem', lineHeight: '1.8' }}>
-              <li>SS couplings for joining pipe and nipples</li>
-              <li>SS flanges for larger connections</li>
-              <li>IC (investment-cast) pipe fittings for complex shapes</li>
-              <li>Seamless, welded and EFW pipes and tubes</li>
-              <li>Sheets, plates, coils and strips</li>
-              <li>Perforated sheets and expanded metal mesh</li>
-              <li>Special alloy sheets and plates</li>
-              <li>Laser cutting, sheet-metal fabrication, powder coating and PVD coating</li>
-            </ul>
-            <p style={{ fontWeight: 600, color: 'var(--text-dark)' }}>
-              Ordering together means one quote, one dispatch and one supplier to call.
+            <p style={{ marginTop: '1.75rem', fontStyle: 'italic', color: 'var(--text-muted)', textAlign: 'center', fontSize: '1rem' }}>
+              A practical rule of thumb: a cheap nipple that rusts out after 9 months costs vastly more in plant downtime than a quality stainless nipple that lasts 10+ years.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Section 11: Where SS nipples are used */}
-      <section className="section">
+      {/* Section 9: Best Practices (Why Join Us in Iota Flow style with relevant icons) */}
+      <section className="section section-light" id="best-practices">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header text-center">
+            <span className="tagline-badge">Best Practices &amp; Engineering Standards</span>
+            <h2>Why Industrial Engineers Rely on Sunrise Precision</h2>
+            <h3>Engineered practices that eliminate leaks, galling, and unexpected downtime</h3>
+          </div>
+
+          <div className="best-practices-grid">
+            <div className="best-practice-card">
+              <div className="bp-icon-badge">📐</div>
+              <h3 className="best-practice-title">Single-Point CNC Threading</h3>
+              <p className="best-practice-desc">
+                We use single-point CNC carbide tooling rather than manual dies, ensuring flawless 55° and 60° thread flanks with zero burrs or crest irregularities.
+              </p>
+            </div>
+
+            <div className="best-practice-card">
+              <div className="bp-icon-badge">🔍</div>
+              <h3 className="best-practice-title">100% Calibrated Gauge Testing</h3>
+              <p className="best-practice-desc">
+                Every production batch is tested against precision Go/No-Go calibrated thread ring and plug gauges to ensure reliable, leak-free mating every time.
+              </p>
+            </div>
+
+            <div className="best-practice-card">
+              <div className="bp-icon-badge">🧪</div>
+              <h3 className="best-practice-title">Spectro-Verified Raw Material</h3>
+              <p className="best-practice-desc">
+                Every lot of SS 304 and SS 316 bar and pipe is spectrometer-checked for strict nickel and molybdenum chemistry before machining starts.
+              </p>
+            </div>
+
+            <div className="best-practice-card">
+              <div className="bp-icon-badge">🛡️</div>
+              <h3 className="best-practice-title">Pickled &amp; Passivated Surfaces</h3>
+              <p className="best-practice-desc">
+                All stainless nipples undergo acid pickling and passivation to strip tramp iron and regenerate a durable, corrosion-resistant chromium oxide barrier.
+              </p>
+            </div>
+
+            <div className="best-practice-card">
+              <div className="bp-icon-badge">⚡</div>
+              <h3 className="best-practice-title">Zero-Galling Assembly Fit</h3>
+              <p className="best-practice-desc">
+                Controlled surface roughness (Ra) and consistent lead threads prevent galling or binding during heavy torquing on site.
+              </p>
+            </div>
+
+            <div className="best-practice-card">
+              <div className="bp-icon-badge">📦</div>
+              <h3 className="best-practice-title">Protective Thread Caps &amp; Packing</h3>
+              <p className="best-practice-desc">
+                Nipples are packed with individual thread caps and heavy-duty moisture-proof cartons to eliminate transit dinging and damage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 10: Custom Fabrication (Photo in left margin, Content in right margin) */}
+      <section className="section" id="custom-fabrication">
+        <div className="container">
+          <div className="custom-fab-grid">
+            <div className="custom-fab-photo">
+              <img 
+                src="/assets/images/custom fabrication.png" 
+                alt="Custom CNC Machining of Stainless Steel Nipples - Sunrise Industries" 
+                loading="lazy" 
+              />
+            </div>
+
+            <div className="custom-fab-content">
+              <span className="tagline-badge">Custom Fabrication</span>
+              <h2>Can't Find Your Size? We Machine It</h2>
+              <p style={{ fontWeight: 600, color: 'var(--text-dark)' }}>
+                Catalogue lists only go so far. Sunrise operates dedicated CNC turning centers in Ahmedabad to machine nipples precisely to your drawing specifications.
+              </p>
+              <p>
+                Whether you need specialized lengths, mixed threads to mate foreign equipment, or extra-thick wall Schedule 80 parts, we manufacture custom prototypes and production runs under one roof:
+              </p>
+
+              <div className="custom-fab-list">
+                <div className="custom-fab-item">
+                  <span className="custom-fab-bullet">&bull;</span>
+                  <span><strong>Combination Threads:</strong> BSPT on one end and NPT on the other to connect imported machinery to Indian pipework.</span>
+                </div>
+                <div className="custom-fab-item">
+                  <span className="custom-fab-bullet">&bull;</span>
+                  <span><strong>Extra-Long Barrel Nipples:</strong> Machined in custom lengths (up to 1000mm) for deep tank penetrations and boiler headers.</span>
+                </div>
+                <div className="custom-fab-item">
+                  <span className="custom-fab-bullet">&bull;</span>
+                  <span><strong>Non-Standard Hex Dimensions:</strong> Custom across-flats hex bars machined to fit recessed instrument cavities.</span>
+                </div>
+                <div className="custom-fab-item">
+                  <span className="custom-fab-bullet">&bull;</span>
+                  <span><strong>Rapid Prototype to Production:</strong> Sample batches within 48-72 hours followed by volume production.</span>
+                </div>
+              </div>
+
+              <div style={{ marginTop: '2rem' }}>
+                <a href="#quote-form" className="btn btn-primary btn-lg">
+                  Upload Your Drawing &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 11: Complementary Products (Content to side, one product photoholder with view all products link) */}
+      <section className="section section-light" id="complementary-products">
+        <div className="container">
+          <div className="complementary-grid">
+            <div>
+              <span className="tagline-badge">Complementary Products</span>
+              <h2>Couplings, Flanges, Pipes and More, Ordered Together</h2>
+              <h3 style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
+                One supplier for the whole joint, not just the nipple
+              </h3>
+              <p style={{ fontSize: '1.05rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                Most piping installations require more than just nipples. Sunrise stocks and manufactures the complete assembly of high-integrity stainless jointing hardware:
+              </p>
+              <ul style={{ margin: '1rem 0 1.5rem 1.25rem', lineHeight: '1.9', color: 'var(--text-primary)' }}>
+                <li>&bull; <strong>SS Couplings &amp; Sockets:</strong> Full and half couplings for joining pipe &amp; nipples</li>
+                <li>&bull; <strong>SS Flanges:</strong> Slip-on, blind, weld neck and threaded companion flanges</li>
+                <li>&bull; <strong>IC Investment-Cast Fittings:</strong> SS elbows, tees, unions and cross fittings</li>
+                <li>&bull; <strong>Pipes &amp; Tubes:</strong> ASTM A312 seamless, welded and EFW pipes</li>
+                <li>&bull; <strong>Raw Materials:</strong> Stainless steel sheets, plates, coils, flats and round bars</li>
+              </ul>
+              <p style={{ fontWeight: 600, color: 'var(--text-dark)' }}>
+                Consolidating your bill of materials with Sunrise means one single purchase order, synchronized dispatch, and zero mismatched thread standards.
+              </p>
+            </div>
+
+            <div className="complementary-photo-card">
+              <img 
+                src="/assets/images/Stainless Steel Pipe Fittings Collection.png" 
+                alt="Stainless Steel Pipe Fittings and Nipples Range" 
+                loading="lazy" 
+              />
+              <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Full Pipe Fitting Hardware Range</h4>
+              <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', marginBottom: '1.25rem' }}>
+                Available in SS 304, 304L, 316 and 316L in standard BSP and NPT threading.
+              </p>
+              <a href="#quote-form" className="btn btn-primary" style={{ width: '100%' }}>
+                View All Products &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 12: Applications (Centered Content + Photo Cards like Livestock in agrifutureindia.com) */}
+      <section className="section" id="applications">
+        <div className="container">
+          <div className="section-header text-center">
             <span className="tagline-badge">Applications</span>
             <h2>Industries and Applications for SS Nipples</h2>
-            <h3>Wherever a pipe needs a dependable joint</h3>
+            <h3>Wherever fluid, gas, or steam lines require a dependable, leak-proof joint</h3>
           </div>
 
-          <div className="cards-grid">
-            <div className="feature-card">
-              <h3 className="feature-card-title">Water &amp; Wastewater</h3>
-              <p className="feature-card-desc">Pumps, chemical dosing lines, filters and treatment skids.</p>
-            </div>
-            <div className="feature-card">
-              <h3 className="feature-card-title">Chemical &amp; Process</h3>
-              <p className="feature-card-desc">Corrosion-resistant transfer lines, valves and gauge ports.</p>
-            </div>
-            <div className="feature-card">
-              <h3 className="feature-card-title">Food, Dairy &amp; Beverage</h3>
-              <p className="feature-card-desc">Hygienic water, steam, CIP and wash-down connections.</p>
-            </div>
-            <div className="feature-card">
-              <h3 className="feature-card-title">Pharma &amp; Clean Utilities</h3>
-              <p className="feature-card-desc">Clean-service and plant utility piping with zero scale flaking.</p>
-            </div>
-            <div className="feature-card">
-              <h3 className="feature-card-title">Oil, Gas &amp; Energy</h3>
-              <p className="feature-card-desc">Small-bore instrumentation, sampling points, and boiler headers.</p>
-            </div>
-            <div className="feature-card">
-              <h3 className="feature-card-title">Marine &amp; Port Side</h3>
-              <p className="feature-card-desc">Coastal, salt-exposed and dockside fluid handling systems.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 12: Why Sunrise */}
-      <section className="section section-light">
-        <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Why Choose Us</span>
-            <h2>Why Buyers Choose Sunrise for SS Nipples</h2>
-          </div>
-
-          <ul className="why-list">
-            <li><strong>Nipples are our main line:</strong> We know thread, grade and length details, because we handle them every day.</li>
-            <li><strong>Ready stock plus custom machining:</strong> Common sizes from stock, special sizes made to order.</li>
-            <li><strong>Raw material under the same roof:</strong> We hold stainless, mild steel and brass stock, so supply doesn't depend on a third party.</li>
-            <li><strong>ISO 9001:2015 certified:</strong> A documented quality system sits behind every batch.</li>
-            <li><strong>Straight advice:</strong> We'll tell you if 304 won't last in your application and 316 will.</li>
-            <li><strong>Export-ready:</strong> Packing and documentation for overseas shipments.</li>
-            <li><strong>Fast quotes:</strong> Send size, type, thread, grade and quantity.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Section 13: How to order & Tamil Nadu Hubs */}
-      <section className="section" id="tamil-nadu">
-        <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Order Process</span>
-            <h2>How to Order SS Nipples From Sunrise</h2>
-          </div>
-
-          <ol className="steps-list">
-            <li><strong>Send your requirement:</strong> Size, type, thread, grade, schedule and quantity. Or a drawing or photo.</li>
-            <li><strong>Get a quote:</strong> We confirm price, availability and timeline.</li>
-            <li><strong>We supply or make:</strong> Stock is picked, or the nipple is machined to your drawing, then inspected.</li>
-            <li><strong>Packed and dispatched:</strong> Sent across India by road freight, or exported with the right documentation.</li>
-          </ol>
-
-          <div style={{ marginTop: '3.5rem' }}>
-            <div className="section-header">
-              <span className="tagline-badge">Specialized State Coverage</span>
-              <h2>Supplying Tamil Nadu Industrial Clusters</h2>
-              <h3>Manufactured and dispatched directly from our Ahmedabad facility</h3>
-              <div style={{ marginTop: '1rem' }}>
-                <Link to="/cities-we-serve" className="btn btn-outline btn-sm">
-                  View All Cities We Serve (India &rarr; Tamil Nadu) &rarr;
-                </Link>
+          <div className="agri-apps-grid">
+            <div 
+              className="agri-app-card"
+              style={{ backgroundImage: `url('/assets/images/water.jpg.jpeg')` }}
+            >
+              <div className="agri-app-content">
+                <span className="agri-app-icon">💧</span>
+                <h3 className="agri-app-title">Water &amp; Wastewater</h3>
+                <p className="agri-app-desc">Pumps, chemical dosing manifolds, filtration skids, RO plants and treatment pipework.</p>
+                <div className="agri-app-pills">
+                  <span className="agri-app-pill">SS 304 / 316</span>
+                  <span className="agri-app-pill">BARREL &amp; HEX</span>
+                  <span className="agri-app-pill">BSP THREADS</span>
+                </div>
               </div>
             </div>
 
-            <div className="city-grid">
-              {tnCities.map((city) => (
-                <Link key={city.slug} to={`/tamil-nadu/${city.slug}`} className="city-card">
-                  <h4>{city.name} &rarr;</h4>
-                  <p>{city.highlight}</p>
-                </Link>
-              ))}
+            <div 
+              className="agri-app-card"
+              style={{ backgroundImage: `url('/assets/images/chemical process line.jpg.jpeg')` }}
+            >
+              <div className="agri-app-content">
+                <span className="agri-app-icon">⚗️</span>
+                <h3 className="agri-app-title">Chemical &amp; Process</h3>
+                <p className="agri-app-desc">Corrosion-resistant transfer lines, acid dosing, sampling valves, and instrumentation ports.</p>
+                <div className="agri-app-pills">
+                  <span className="agri-app-pill">SS 316L</span>
+                  <span className="agri-app-pill">SCH 80 HEAVY</span>
+                  <span className="agri-app-pill">NPT TAPER</span>
+                </div>
+              </div>
+            </div>
+
+            <div 
+              className="agri-app-card"
+              style={{ backgroundImage: `url('/assets/images/food and bevrages.jpg.jpeg')` }}
+            >
+              <div className="agri-app-content">
+                <span className="agri-app-icon">🥛</span>
+                <h3 className="agri-app-title">Food, Dairy &amp; Beverage</h3>
+                <p className="agri-app-desc">Hygienic utility steam lines, CIP clean-in-place lines, milk transfer, and wash-down connections.</p>
+                <div className="agri-app-pills">
+                  <span className="agri-app-pill">SS 304 FOOD GRADE</span>
+                  <span className="agri-app-pill">CLOSE NIPPLE</span>
+                  <span className="agri-app-pill">POLISHED</span>
+                </div>
+              </div>
+            </div>
+
+            <div 
+              className="agri-app-card"
+              style={{ backgroundImage: `url('/assets/images/Pharma & Clean Utilities.jpg.jpeg')` }}
+            >
+              <div className="agri-app-content">
+                <span className="agri-app-icon">💊</span>
+                <h3 className="agri-app-title">Pharma &amp; Clean Utilities</h3>
+                <p className="agri-app-desc">Clean-steam distribution, WFI loops, nitrogen purge drops, and zero-scale process utilities.</p>
+                <div className="agri-app-pills">
+                  <span className="agri-app-pill">SS 316L DUAL CERT</span>
+                  <span className="agri-app-pill">ELECTROPOLISHED</span>
+                  <span className="agri-app-pill">MTC 3.1</span>
+                </div>
+              </div>
+            </div>
+
+            <div 
+              className="agri-app-card"
+              style={{ backgroundImage: `url('/assets/images/Oil, Gas & Energy.jpg.jpeg')` }}
+            >
+              <div className="agri-app-content">
+                <span className="agri-app-icon">⚡</span>
+                <h3 className="agri-app-title">Oil, Gas &amp; Energy</h3>
+                <p className="agri-app-desc">High-pressure instrumentation connections, boiler steam headers, turbine lube skids, and fuel lines.</p>
+                <div className="agri-app-pills">
+                  <span className="agri-app-pill">SCHEDULE 80</span>
+                  <span className="agri-app-pill">ASME B1.20.1 NPT</span>
+                  <span className="agri-app-pill">HIGH TEMP</span>
+                </div>
+              </div>
+            </div>
+
+            <div 
+              className="agri-app-card"
+              style={{ backgroundImage: `url('/assets/images/Marine & Port Side.jpg.jpeg')` }}
+            >
+              <div className="agri-app-content">
+                <span className="agri-app-icon">⚓</span>
+                <h3 className="agri-app-title">Marine &amp; Port Side</h3>
+                <p className="agri-app-desc">Salt-spray exposed dockside fluid transfer, seawater piping, marine scrubbers, and offshore skids.</p>
+                <div className="agri-app-pills">
+                  <span className="agri-app-pill">SS 316 MO CONTENT</span>
+                  <span className="agri-app-pill">SEAWORTHY PACK</span>
+                  <span className="agri-app-pill">EXPORT READY</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 14: FAQ */}
-      <section className="section section-light" id="faq">
+      {/* Section 13: Why Choose Us (Iota Flow Style with Arrow Indicators and Factory Worker Photo) */}
+      <section className="section section-light" id="why-choose-us">
         <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">FAQs</span>
-            <h2>SS Nipple FAQs</h2>
-            <h3>Answers to common questions about types, materials, threads, and delivery</h3>
+          <div className="section-header text-center">
+            <span className="tagline-badge">Why Choose Us</span>
+            <h2>Why Buyers Across India Choose Sunrise for SS Nipples</h2>
+            <h3>An unbroken chain of engineering reliability from raw billet to finished joint</h3>
           </div>
 
-          <FaqAccordion items={homeFaqs} />
+          <div className="why-choose-iota-grid">
+            <div className="why-choose-photo-side">
+              <img 
+                src="/assets/images/why choose us.png" 
+                alt="Sunrise Industries Machinist Operating CNC Machine in Ahmedabad" 
+                loading="lazy" 
+              />
+              <div className="why-choose-badge-overlay">
+                <strong>Sunrise Industries Manufacturing Plant</strong>
+                <span>ISO 9001:2015 Certified In-House CNC Machining &amp; Quality Inspection Facility</span>
+              </div>
+            </div>
+
+            <div className="why-choose-flow-side">
+              <div className="why-flow-item">
+                <div className="why-flow-icon">🏭</div>
+                <div className="why-flow-text">
+                  <h4>1. Direct Factory Manufacturing</h4>
+                  <p>No middlemen markups. Nipples are manufactured directly at our Ahmedabad works with complete batch traceability.</p>
+                </div>
+              </div>
+
+              <div className="why-flow-arrow">&darr;</div>
+
+              <div className="why-flow-item">
+                <div className="why-flow-icon">⚙️</div>
+                <div className="why-flow-text">
+                  <h4>2. In-House CNC Machining &amp; Customization</h4>
+                  <p>10+ production lines machining hex, barrel, close and reducing configurations to your custom drawing specifications.</p>
+                </div>
+              </div>
+
+              <div className="why-flow-arrow">&darr;</div>
+
+              <div className="why-flow-item">
+                <div className="why-flow-icon">📦</div>
+                <div className="why-flow-text">
+                  <h4>3. Raw Material Stock Under One Roof</h4>
+                  <p>Substantial on-site inventory of prime SS 304, 316, brass, and MS rounds ensures zero supply chain hold-ups.</p>
+                </div>
+              </div>
+
+              <div className="why-flow-arrow">&darr;</div>
+
+              <div className="why-flow-item">
+                <div className="why-flow-icon">✓</div>
+                <div className="why-flow-text">
+                  <h4>4. 100% Quality &amp; Gauge Inspection</h4>
+                  <p>Every single thread verified against calibrated ring gauges. Full chemical and physical MTC 3.1 provided with dispatch.</p>
+                </div>
+              </div>
+
+              <div className="why-flow-arrow">&darr;</div>
+
+              <div className="why-flow-item">
+                <div className="why-flow-icon">🚚</div>
+                <div className="why-flow-text">
+                  <h4>5. Pan-India Dispatch &amp; Global Exports</h4>
+                  <p>Rapid dispatch across all 28+ Indian states within 3-7 business days, plus seaworthy export shipping worldwide.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Section 15: Final CTA */}
+      {/* Section 14: How to Order (Agrifuture Installation, Delivery & Support 4-Card Style) */}
+      <section className="section" id="how-to-order">
+        <div className="container">
+          <div className="agri-order-container">
+            <div className="agri-order-header">
+              <h2>How to Order SS Nipples From Sunrise</h2>
+              <p>Our commitment to your plant's piping reliability — straightforward, swift, and certified.</p>
+            </div>
+
+            <div className="agri-order-grid">
+              <div className="agri-order-card">
+                <div className="agri-order-icon">📋</div>
+                <h3>1. Share Your Spec</h3>
+                <p>Send your required size, thread standard (BSP/NPT), stainless grade (304/316), wall schedule, and quantities — or upload a CAD drawing.</p>
+              </div>
+
+              <div className="agri-order-card">
+                <div className="agri-order-icon">💰</div>
+                <h3>2. Fast Factory Quotation</h3>
+                <p>We confirm transparent factory-direct pricing, availability, timeline, and material test certification options within hours.</p>
+              </div>
+
+              <div className="agri-order-card">
+                <div className="agri-order-icon">⚙️</div>
+                <h3>3. Picked or CNC Machined</h3>
+                <p>Standard items are picked immediately from stock; custom fittings are CNC machined and 100% thread gauge inspected.</p>
+              </div>
+
+              <div className="agri-order-card">
+                <div className="agri-order-icon">🚚</div>
+                <h3>4. Pan-India Delivery</h3>
+                <p>Dispatched with protective thread caps across India via dependable road freight in 3-7 days, or packed for sea export.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 15: FAQ (Centered Content) */}
+      <section className="section section-light" id="faq">
+        <div className="container" style={{ maxWidth: '880px', margin: '0 auto' }}>
+          <div className="section-header text-center">
+            <span className="tagline-badge">FAQs</span>
+            <h2>SS Nipple Frequently Asked Questions</h2>
+            <h3>Direct answers to common questions about types, materials, threads, and dispatch</h3>
+          </div>
+
+          <FaqAccordion items={homeFaqs} />
+
+          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+              Have a custom thread question or need distributor bulk rates?
+            </p>
+            <a href="tel:+916264131446" className="btn btn-outline">
+              Call Our Engineers: +91 62641 31446 &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 16: Direct Factory Quotation (Agrifuture Bottom CTA Style) */}
       <section className="section" id="quote-form">
-        <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
-          <span className="tagline-badge">Direct Factory Quotation</span>
-          <h2>Need SS Nipples? Tell Us the Size, Type and Quantity.</h2>
-          <h3 style={{ color: 'var(--text-muted)', fontWeight: 500, marginBottom: '2rem' }}>
-            We'll come back with a clear quote.
-          </h3>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
-            <a href="tel:+916264131446" className="btn btn-primary btn-lg">
-              Get a Quote &rarr;
-            </a>
-            <a href="https://wa.me/916264131446" className="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
-              WhatsApp
-            </a>
-            <a href="tel:+916264131446" className="btn btn-outline btn-lg">
-              Call Now
-            </a>
+        <div className="container">
+          <div className="agri-cta-box">
+            <div className="agri-cta-text">
+              <h2>Need SS Nipples? Tell Us the Size, Type and Quantity.</h2>
+              <p>
+                Stainless steel nipples, CNC precision fittings, and raw material stock dispatched directly from our Ahmedabad manufacturing facility.
+              </p>
+            </div>
+            <div className="agri-cta-btns">
+              <a href="tel:+916264131446" className="agri-cta-btn-primary">
+                Get a Quote &rarr;
+              </a>
+              <a href="#nipple-range" className="agri-cta-btn-secondary">
+                View All Products &rarr;
+              </a>
+            </div>
           </div>
         </div>
       </section>

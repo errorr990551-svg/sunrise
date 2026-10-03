@@ -3,6 +3,18 @@ import { useParams, Link } from 'react-router-dom';
 import { citiesData } from '../data/citiesData';
 import FaqAccordion from '../components/FaqAccordion';
 
+// Industry background image mapping
+const industryImages = [
+  '/assets/images/water.jpg.jpeg',
+  '/assets/images/chemical process line.jpg.jpeg',
+  '/assets/images/food and bevrages.jpg.jpeg',
+  '/assets/images/Pharma & Clean Utilities.jpg.jpeg',
+  '/assets/images/Oil, Gas & Energy.jpg.jpeg',
+  '/assets/images/Marine & Port Side.jpg.jpeg'
+];
+
+const industryIcons = ['🚗', '⚡', '🏭', '⚗️', '⚓', '💧'];
+
 export default function CityDetail() {
   const { citySlug } = useParams();
   const city = citiesData[citySlug];
@@ -27,14 +39,14 @@ export default function CityDetail() {
 
   return (
     <>
-      {/* Section 1: Hero */}
+      {/* Section 1: Hero Banner */}
       <section className="hero">
         <div className="container">
           <div className="hero-content">
             <nav className="breadcrumbs" aria-label="Breadcrumb">
               <Link to="/">Home</Link>
               <span className="separator">/</span>
-              <Link to="/cities-we-serve">Cities We Serve</Link>
+              <Link to="/market-area">Market Area</Link>
               <span className="separator">/</span>
               <span className="current">{city.name}</span>
             </nav>
@@ -51,11 +63,8 @@ export default function CityDetail() {
               <a href="#quote-form" className="btn btn-primary btn-lg">
                 Get a {city.name} Quote <span className="btn-arrow">&rarr;</span>
               </a>
-              <a href="#quote-form" className="btn btn-outline-white btn-lg">
-                Send Your Size List
-              </a>
-              <a href="tel:+916264131446" className="btn btn-outline-white btn-lg">
-                Call +91 62641 31446
+              <a href="#nipple-range" className="btn btn-outline-white btn-lg">
+                View All Products &rarr;
               </a>
             </div>
           </div>
@@ -78,71 +87,113 @@ export default function CityDetail() {
         </div>
       </section>
 
-      {/* Section 3: Why City */}
-      <section className="section">
+      {/* Section 3: Regional Analysis (Industrial Fundamentals 2-Col Style) */}
+      <section className="section" id="regional-analysis">
         <div className="container">
           <div className="section-header">
             <span className="tagline-badge">Regional Analysis</span>
             <h2>{city.whyTitle}</h2>
             <h3>{city.whySubtitle}</h3>
           </div>
-          <div style={{ maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.8' }}>
-            {city.whyParagraphs.map((p, idx) => (
-              <p key={idx} style={{ marginTop: idx > 0 ? '1rem' : 0 }}>{p}</p>
-            ))}
+
+          <div className="fundamentals-two-col">
+            <div className="fundamentals-text">
+              {city.whyParagraphs.map((p, idx) => (
+                <p key={idx} style={{ marginTop: idx > 0 ? '1.25rem' : 0 }}>{p}</p>
+              ))}
+            </div>
+
+            <div className="fundamentals-photo-card">
+              <img 
+                src="/assets/images/Stainless Steel Pipe Fittings Collection.png" 
+                alt={`Stainless Steel Pipe Fittings and Nipples for ${city.name}`} 
+                loading="lazy"
+              />
+              <span className="photo-caption-badge">Precision Joints for {city.name} Industrial Plants</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 4: The range */}
+      {/* Section 4: Product Range (From One Manufacturer + Split Header + Photos) */}
       <section className="section section-light" id="nipple-range">
         <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Local Demand Profile</span>
-            <h2>The SS Nipples {city.name} Buyers Order Most</h2>
-            <h3>Choose by connection type, then size, then grade</h3>
+          <div className="section-header-split">
+            <div>
+              <span className="tagline-badge">Local Demand Profile</span>
+              <h2>The SS Nipples {city.name} Buyers Order Most</h2>
+              <h3 style={{ margin: 0 }}>Choose by connection type, then size, then stainless grade</h3>
+            </div>
+            <div>
+              <a href="#specifications" className="btn btn-outline">
+                View All Products &rarr;
+              </a>
+            </div>
           </div>
 
           <div className="cards-grid">
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/SS Hex Nipple.png" alt="SS Hex Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Hex Nipple</h3>
               <p className="feature-card-desc">
                 The industrial workhorse. The hexagon lets you hold the nipple with a spanner while tightening, protecting threads and providing a leak-tight joint.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
+
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/ss barrel nipple.png" alt="SS Barrel Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Barrel Nipple</h3>
               <p className="feature-card-desc">
-                Threaded at both ends with a plain, unthreaded centre. Used where you need length between a valve and a tee or pump outlet.
+                Threaded at both ends with a plain, unthreaded centre. Used where you need length between a valve and a tee, pump outlet or manifold port.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
+
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/SS Close Nipple.png" alt="SS Close Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Close Nipple</h3>
               <p className="feature-card-desc">
-                Fully threaded along its entire body so fittings sit nearly touching. Common on compact equipment manifolds and instrument panels.
+                Fully threaded along its entire body so fittings sit nearly touching. Common on compact equipment manifolds, skids and instrument panels.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
+
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/SS Reducing Nipple.png" alt="SS Reducing Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Reducing Nipple</h3>
               <p className="feature-card-desc">
-                Steps a line up or down from one nominal size to another (e.g. ¾" down to ½") at gauge, sensor, or pump connections.
+                Steps a line up or down from one nominal size to another (e.g. ¾" down to ½") at gauge, sensor, or pump connections without redundant fittings.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
+
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/7a8533f9-c0ee-4957-8664-a72711dc71b7.png" alt="SS Hose Nipple" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">SS Hose Nipple</h3>
               <p className="feature-card-desc">
                 Barbed or ribbed end for gripping flexible hose securely, with a threaded pipe end for the rigid machine connection.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
+
             <div className="feature-card">
+              <div className="product-thumb-wrap">
+                <img src="/assets/images/Custom CNC Nipples.png" alt="Custom CNC Nipples" loading="lazy" />
+              </div>
               <h3 className="feature-card-title">Custom CNC Nipples</h3>
               <p className="feature-card-desc">
-                Special lengths, mixed-thread ends (BSPT to NPT), and non-standard hex flats machined to drawing for OEM and prototype work.
+                Special lengths, mixed-thread ends (BSPT to NPT), and non-standard hex flats machined to drawing for OEM and prototype requirements.
               </p>
               <a href="#quote-form" className="feature-card-btn">Click Here</a>
             </div>
@@ -150,13 +201,58 @@ export default function CityDetail() {
 
           <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
             <a href="#quote-form" className="btn btn-primary btn-lg">
-              Request {city.name} Price List &rarr;
+              Request {city.name} Nipple Price List &rarr;
             </a>
           </div>
         </div>
       </section>
 
-      {/* Section 5: City supply snapshot */}
+      {/* Section 5: Engineering Excellence Banner */}
+      <section className="section section-dark" id="engineering-excellence">
+        <div className="container">
+          <div className="engineering-split-grid">
+            <div className="engineering-content">
+              <span className="tagline-badge" style={{ color: 'var(--primary)', background: 'rgba(245, 166, 35, 0.15)' }}>
+                Engineering Excellence
+              </span>
+              <h2>Precision CNC Turning for {city.name} Industrial Plants</h2>
+              <p>
+                Need a custom SS nipple that isn't in any catalogue? Our engineering team in Ahmedabad takes your drawing or sample from first prototype to full-scale production, with material selection, CNC machining, threading and inspection all done under one roof. We machine hex, barrel, close and reducing nipples in SS 304 and SS 316, in BSP, BSPT and NPT threads, and in special lengths, mixed threads and non-standard hex sizes. With 10+ production lines, an ISO 9001:2015 certified quality system and fast dispatch to {city.name}, we deliver precision components that fit the first time.
+              </p>
+
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <a href="#quote-form" className="btn btn-primary btn-lg">
+                  Request Custom {city.name} Order &rarr;
+                </a>
+                <a href="#quote-form" className="btn btn-outline-white btn-lg">
+                  Get Quote Now &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div className="video-holder-card">
+              <div 
+                className="video-screen"
+                style={{ backgroundImage: `url('/assets/images/custom fabrication.png')` }}
+              >
+                <div className="video-play-btn" title="Watch Precision CNC Machining">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="video-card-footer">
+                <div className="video-info-title">
+                  <span>CNC Machining Shop &bull; Ahmedabad Works</span>
+                </div>
+                <span className="video-duration-tag">01:45 &bull; 1080p HD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: Engineer's Matrix (Proper Table with Borders + 2 Photos) */}
       <section className="section" id="specifications">
         <div className="container">
           <div className="section-header">
@@ -165,251 +261,373 @@ export default function CityDetail() {
             <h3>Engineering reference matrix for {city.name} industrial environments</h3>
           </div>
 
-          <div className="table-container">
-            <table className="specs-table">
-              <thead>
-                <tr>
-                  <th>Application / Duty</th>
-                  <th>Grade</th>
-                  <th>Type</th>
-                  <th>Thread</th>
-                  <th>Note</th>
-                </tr>
-              </thead>
-              <tbody>
-                {city.snapshotTable.map((row, idx) => (
-                  <tr key={idx}>
-                    <td><strong>{row.app}</strong></td>
-                    <td>{row.grade}</td>
-                    <td>{row.type}</td>
-                    <td>{row.thread}</td>
-                    <td>{row.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="specs-split-grid">
+            <div>
+              <div style={{ overflowX: 'auto' }}>
+                <table className="specs-table-bordered">
+                  <thead>
+                    <tr>
+                      <th style={{ width: '32%' }}>Application / Duty</th>
+                      <th>Grade</th>
+                      <th>Type</th>
+                      <th>Thread</th>
+                      <th>Engineering Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {city.snapshotTable.map((row, idx) => (
+                      <tr key={idx}>
+                        <td><strong>{row.app}</strong></td>
+                        <td><span className="badge badge-316">{row.grade}</span></td>
+                        <td>{row.type}</td>
+                        <td>{row.thread}</td>
+                        <td>{row.note}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {city.snapshotNote && (
+                <p style={{ marginTop: '1.25rem', fontSize: '0.95rem', color: 'var(--text-muted)' }}>
+                  {city.snapshotNote}
+                </p>
+              )}
+            </div>
+
+            <div className="specs-photos-stack">
+              <div className="specs-photo-card">
+                <img src="/assets/images/nipples-range.jpg" alt={`${city.name} SS Nipple Stock Range`} loading="lazy" />
+                <h4>Certified Stock Sizes (⅛" to 4")</h4>
+                <p>SS 304 &amp; 316 with stamped grade &amp; thread identification.</p>
+              </div>
+
+              <div className="specs-photo-card">
+                <img src="/assets/images/Custom CNC Nipples.png" alt={`${city.name} Custom Machined Nipples`} loading="lazy" />
+                <h4>Heavy Duty Schedule 80 Types</h4>
+                <p>NPT and BSP threads machined to exact mating specs.</p>
+              </div>
+            </div>
           </div>
-          {city.snapshotNote && (
-            <p style={{ marginTop: '1rem', fontSize: '0.95rem', color: 'var(--text-muted)' }}>
-              {city.snapshotNote}
-            </p>
-          )}
         </div>
       </section>
 
-      {/* Section 6: Choosing the right nipple */}
-      <section className="section section-light">
+      {/* Section 7: Four Questions (Iota Flow Step Cards Style) */}
+      <section className="section section-light" id="buying-checklist">
         <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Checklist</span>
-            <h2>Four Questions to Ask Before You Order</h2>
-            <h3>Tailored specifically for {city.name} conditions</h3>
+          <div className="section-header text-center">
+            <span className="tagline-badge">Buying Guide</span>
+            <h2>Four Questions to Ask Before You Order in {city.name}</h2>
+            <h3>Tailored specifically for {city.name}'s industrial conditions</h3>
           </div>
 
-          <div className="four-questions-grid">
-            {city.questions.map((q) => (
-              <div key={q.num} className="question-card">
-                <div className="question-num">{q.num}</div>
-                <h3 className="question-title">{q.title}</h3>
-                <p className="question-text">{q.text}</p>
+          <div className="iota-steps-flow">
+            {city.questions.map((q, idx) => (
+              <div key={q.num} className="iota-step-card">
+                <div className="iota-step-top">
+                  <span className="iota-step-num">{q.num}</span>
+                  <div className="iota-step-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="iota-step-title">{q.title}</h3>
+                <p className="iota-step-desc">{q.text}</p>
+                {idx < city.questions.length - 1 && (
+                  <div className="iota-step-connector">&rarr;</div>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 7: Material guide */}
-      <section className="section">
+      {/* Section 8: Metallurgy Guide (Centered with Proper Table) */}
+      <section className="section" id="metallurgy-guide">
         <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Metallurgy</span>
+          <div className="section-header text-center">
+            <span className="tagline-badge">Metallurgy Guide</span>
             <h2>SS 304, SS 316, MS or Brass: {city.name} Edition</h2>
-            <h3>Match the material to the line environment, not just the budget</h3>
+            <h3>Match the material to the line environment, not just the upfront budget</h3>
           </div>
 
-          <div className="table-container">
-            <table className="specs-table">
-              <thead>
-                <tr>
-                  <th>Material</th>
-                  <th>Fine when…</th>
-                  <th>Think twice when…</th>
-                </tr>
-              </thead>
-              <tbody>
-                {city.materialTable.map((m, idx) => (
-                  <tr key={idx}>
-                    <td><strong>{m.mat}</strong></td>
-                    <td>{m.good}</td>
-                    <td>{m.bad}</td>
+          <div className="metallurgy-center-wrap">
+            <div style={{ overflowX: 'auto' }}>
+              <table className="metallurgy-table-center">
+                <thead>
+                  <tr>
+                    <th>Material</th>
+                    <th>Works Well When…</th>
+                    <th>Think Twice When…</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {city.materialTable.map((m, idx) => (
+                    <tr key={idx}>
+                      <td><strong>{m.mat}</strong></td>
+                      <td>{m.good}</td>
+                      <td>{m.bad}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {city.materialRule && (
+              <p style={{ marginTop: '1.75rem', fontStyle: 'italic', color: 'var(--text-muted)', textAlign: 'center', fontSize: '1rem' }}>
+                {city.materialRule}
+              </p>
+            )}
           </div>
-          {city.materialRule && (
-            <p style={{ marginTop: '1.25rem', fontStyle: 'italic', color: 'var(--text-muted)' }}>
-              {city.materialRule}
-            </p>
-          )}
         </div>
       </section>
 
-      {/* Section 8: Local conditions */}
-      <section className="section section-light">
+      {/* Section 9: Operational Realities & Fitting Tips (Iota Flow Careers Style) */}
+      <section className="section section-light" id="best-practices">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header text-center">
             <span className="tagline-badge">Operational Realities</span>
             <h2>{city.conditionsTitle}</h2>
             <h3>{city.conditionsSubtitle}</h3>
           </div>
 
-          <div className="conditions-grid">
+          <div className="best-practices-grid">
             {city.conditions.map((cond, idx) => (
-              <div key={idx} className="condition-item">
-                <h4>{cond.title}</h4>
-                <p>{cond.text}</p>
+              <div key={idx} className="best-practice-card">
+                <div className="bp-icon-badge">
+                  {idx === 0 ? '🌊' : idx === 1 ? '🌧️' : idx === 2 ? '⚡' : idx === 3 ? '⚙️' : '⏱️'}
+                </div>
+                <h3 className="best-practice-title">{cond.title}</h3>
+                <p className="best-practice-desc">{cond.text}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Section 9: Fitting tips */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Installation Advice</span>
-            <h2>Fitting Stainless Nipples Without Headaches</h2>
-            <h3>Field practices that save plant hours and prevent leaks</h3>
-          </div>
+          {/* Fitting Tips Grid */}
+          <div style={{ marginTop: '4rem' }}>
+            <div className="section-header text-center">
+              <span className="tagline-badge">Field Fitting Advice</span>
+              <h2>Fitting Stainless Nipples in {city.name} Without Headaches</h2>
+              <h3>Practical field habits that save plant hours and prevent leaks</h3>
+            </div>
 
-          <ul className="tips-list">
-            {city.fittingTips.map((tip, idx) => (
-              <li key={idx}>{tip}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Section 10: Custom nipples */}
-      <section className="section section-light">
-        <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">CNC Machining</span>
-            <h2>Special Nipples for {city.name} Fabricators and OEMs</h2>
-            <h3>When the catalogue size isn't the size you need</h3>
-          </div>
-          <p style={{ maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.8' }}>
-            We CNC-machine nipples to drawing or sample in stainless steel, mild steel, brass and aluminium. Typical {city.name} custom requests include:
-          </p>
-
-          <ul style={{ maxWidth: '850px', margin: '1.5rem auto', lineHeight: '1.8', paddingLeft: '1.5rem' }}>
-            {city.customDetails.map((detail, idx) => (
-              <li key={idx}>{detail}</li>
-            ))}
-          </ul>
-
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <a href="#quote-form" className="btn btn-primary btn-lg">
-              Upload Your Drawing or Sample &rarr;
-            </a>
+            <div className="best-practices-grid">
+              {city.fittingTips.map((tip, idx) => (
+                <div key={idx} className="best-practice-card">
+                  <div className="bp-icon-badge">🔧</div>
+                  <h3 className="best-practice-title">Tip {idx + 1}</h3>
+                  <p className="best-practice-desc">{tip}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 11: Complete the line */}
-      <section className="section">
+      {/* Section 10: Custom Nipples (Photo Left, Content Right) */}
+      <section className="section" id="custom-fabrication">
         <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Complete Supply</span>
-            <h2>Order Couplings, Flanges and Pipes With Your Nipples</h2>
-          </div>
-          <div style={{ maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.8' }}>
-            <p>{city.completeLineText}</p>
+          <div className="custom-fab-grid">
+            <div className="custom-fab-photo">
+              <img 
+                src="/assets/images/custom fabrication.png" 
+                alt={`Custom CNC Machined SS Nipples for ${city.name}`} 
+                loading="lazy" 
+              />
+            </div>
+
+            <div className="custom-fab-content">
+              <span className="tagline-badge">CNC Machining</span>
+              <h2>Special Nipples for {city.name} Fabricators and OEMs</h2>
+              <p style={{ fontWeight: 600, color: 'var(--text-dark)' }}>
+                When the catalogue size isn't the size you need. We CNC-machine nipples to drawing or sample in stainless steel, mild steel, brass and aluminium:
+              </p>
+
+              <div className="custom-fab-list">
+                {city.customDetails.map((detail, idx) => (
+                  <div key={idx} className="custom-fab-item">
+                    <span className="custom-fab-bullet">&bull;</span>
+                    <span>{detail}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ marginTop: '2rem' }}>
+                <a href="#quote-form" className="btn btn-primary btn-lg">
+                  Upload Your Drawing or Sample &rarr;
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 12: Industries */}
-      <section className="section section-light">
+      {/* Section 11: Complete Supply / Complementary Products */}
+      <section className="section section-light" id="complementary-products">
         <div className="container">
-          <div className="section-header">
+          <div className="complementary-grid">
+            <div>
+              <span className="tagline-badge">Complete Supply</span>
+              <h2>Order Couplings, Flanges and Pipes With Your Nipples</h2>
+              <p style={{ fontSize: '1.05rem', lineHeight: '1.8', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+                {city.completeLineText}
+              </p>
+              <ul style={{ margin: '1rem 0 1.5rem 1.25rem', lineHeight: '1.9', color: 'var(--text-primary)' }}>
+                <li>&bull; <strong>SS Couplings &amp; Sockets:</strong> Full, half and reducing couplings</li>
+                <li>&bull; <strong>SS Companion Flanges:</strong> Table D/E, ANSI 150/300# slip-on &amp; blind</li>
+                <li>&bull; <strong>IC Investment Cast Fittings:</strong> High precision 90° elbows, tees and unions</li>
+                <li>&bull; <strong>Pipes &amp; Tubes:</strong> ASTM A312 seamless and welded in SS 304 and 316</li>
+              </ul>
+              <p style={{ fontWeight: 600, color: 'var(--text-dark)' }}>
+                Direct dispatch from Ahmedabad ensures synchronized delivery for your entire piping bill of materials.
+              </p>
+            </div>
+
+            <div className="complementary-photo-card">
+              <img 
+                src="/assets/images/Stainless Steel Pipe Fittings Collection.png" 
+                alt={`Pipe Fitting Range for ${city.name}`} 
+                loading="lazy" 
+              />
+              <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Full Jointing Hardware Range</h4>
+              <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', marginBottom: '1.25rem' }}>
+                Manufactured and stocked under one roof at Sunrise Industries.
+              </p>
+              <a href="#quote-form" className="btn btn-primary" style={{ width: '100%' }}>
+                View All Products &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 12: Where City's SS Nipples Go / Industries Served (Agrifuture Style Cards) */}
+      <section className="section" id="industries">
+        <div className="container">
+          <div className="section-header text-center">
             <span className="tagline-badge">Sectors Served</span>
             <h2>Where {city.name}'s SS Nipples Go</h2>
+            <h3>Engineered piping solutions for {city.name}'s core manufacturing clusters</h3>
           </div>
 
-          <div className="cards-grid">
+          <div className="agri-apps-grid">
             {city.industries.map((ind, idx) => (
-              <div key={idx} className="feature-card">
-                <h3 className="feature-card-title">{ind.name}</h3>
-                <p className="feature-card-desc">{ind.desc}</p>
+              <div 
+                key={idx}
+                className="agri-app-card"
+                style={{ backgroundImage: `url('${industryImages[idx % industryImages.length]}')` }}
+              >
+                <div className="agri-app-content">
+                  <span className="agri-app-icon">{industryIcons[idx % industryIcons.length]}</span>
+                  <h3 className="agri-app-title">{ind.name}</h3>
+                  <p className="agri-app-desc">{ind.desc}</p>
+                  <div className="agri-app-pills">
+                    <span className="agri-app-pill">SS 316 / 304</span>
+                    <span className="agri-app-pill">SCH 40 / 80</span>
+                    <span className="agri-app-pill">BSP / NPT</span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 13: Why Sunrise */}
-      <section className="section">
+      {/* Section 13: Why City Buyers Choose Sunrise (Iota Flow Style with Arrows + Worker Photo) */}
+      <section className="section section-light" id="why-sunrise">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header text-center">
             <span className="tagline-badge">Our Commitment</span>
-            <h2>Why {city.name} Buyers Choose Sunrise</h2>
+            <h2>Why {city.name} Buyers Choose Sunrise for SS Nipples</h2>
+            <h3>Direct manufacturer accountability from Ahmedabad to {city.name}</h3>
           </div>
 
-          <ul className="why-list">
-            {city.whySunrise.map((reason, idx) => (
-              <li key={idx}>{reason}</li>
-            ))}
-          </ul>
+          <div className="why-choose-iota-grid">
+            <div className="why-choose-photo-side">
+              <img 
+                src="/assets/images/why choose us.png" 
+                alt="Sunrise Industries CNC Machining Shop" 
+                loading="lazy" 
+              />
+              <div className="why-choose-badge-overlay">
+                <strong>Sunrise Industries Direct Supply</strong>
+                <span>Supplying {city.name} plants with ISO 9001:2015 certified fittings</span>
+              </div>
+            </div>
+
+            <div className="why-choose-flow-side">
+              {city.whySunrise.map((reason, idx) => (
+                <React.Fragment key={idx}>
+                  <div className="why-flow-item">
+                    <div className="why-flow-icon">✓</div>
+                    <div className="why-flow-text">
+                      <h4>Pillar {idx + 1}</h4>
+                      <p>{reason}</p>
+                    </div>
+                  </div>
+                  {idx < city.whySunrise.length - 1 && (
+                    <div className="why-flow-arrow">&darr;</div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Section 14: Delivery and ordering */}
-      <section className="section section-light">
+      {/* Section 14: Logistics / How It Works (Agrifuture Installation, Delivery & Support Style) */}
+      <section className="section" id="logistics">
         <div className="container">
-          <div className="section-header">
-            <span className="tagline-badge">Logistics</span>
-            <h2>From Ahmedabad to {city.name}: How It Works</h2>
-            <h3>Direct dispatches with established road freight carriers</h3>
-          </div>
+          <div className="agri-order-container">
+            <div className="agri-order-header">
+              <h2>From Ahmedabad to {city.name}: How It Works</h2>
+              <p>Direct dispatches with established road freight carriers across Tamil Nadu.</p>
+            </div>
 
-          <ol className="steps-list">
-            {city.deliverySteps.map((step, idx) => (
-              <li key={idx}>{step}</li>
-            ))}
-          </ol>
+            <div className="agri-order-grid">
+              {city.deliverySteps.map((step, idx) => (
+                <div key={idx} className="agri-order-card">
+                  <div className="agri-order-icon">
+                    {idx === 0 ? '📋' : idx === 1 ? '💰' : idx === 2 ? '⚙️' : '🚚'}
+                  </div>
+                  <h3>Step {idx + 1}</h3>
+                  <p>{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Section 15: FAQ */}
-      <section className="section" id="faq">
-        <div className="container">
-          <div className="section-header">
+      {/* Section 15: FAQ (Centered Content) */}
+      <section className="section section-light" id="faq">
+        <div className="container" style={{ maxWidth: '880px', margin: '0 auto' }}>
+          <div className="section-header text-center">
             <span className="tagline-badge">FAQs</span>
-            <h2>{city.name} SS Nipple FAQs</h2>
+            <h2>{city.name} SS Nipple Frequently Asked Questions</h2>
+            <h3>Direct engineering answers for buyers and project engineers in {city.name}</h3>
           </div>
 
           <FaqAccordion items={city.faqs} />
         </div>
       </section>
 
-      {/* Section 16: Final CTA & Interlinks */}
-      <section className="section section-light" id="quote-form">
-        <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
-          <span className="tagline-badge">Direct Factory Quotation</span>
-          <h2>{city.ctaHeadline}</h2>
-          <h3 style={{ color: 'var(--text-muted)', fontWeight: 500, marginBottom: '2rem' }}>
-            {city.ctaSub}
-          </h3>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
-            <a href="tel:+916264131446" className="btn btn-primary btn-lg">
-              Call +91 62641 31446 <span className="btn-arrow">&rarr;</span>
-            </a>
-            <a href="mailto:sales@sunrise.industries" className="btn btn-outline btn-lg">
-              Email {city.name} RFQ
-            </a>
+      {/* Section 16: Final CTA (Agrifuture Bottom CTA Style + Interlinks) */}
+      <section className="section" id="quote-form">
+        <div className="container">
+          <div className="agri-cta-box">
+            <div className="agri-cta-text">
+              <h2>{city.ctaHeadline}</h2>
+              <p>{city.ctaSub}</p>
+            </div>
+            <div className="agri-cta-btns">
+              <a href="tel:+916264131446" className="agri-cta-btn-primary">
+                Call +91 62641 31446 &rarr;
+              </a>
+              <a href="#nipple-range" className="agri-cta-btn-secondary">
+                View All Products &rarr;
+              </a>
+            </div>
           </div>
 
           {/* Interlinking Neighbouring Cities */}
@@ -422,8 +640,8 @@ export default function CityDetail() {
                     &rarr; {nb.name}
                   </Link>
                 ))}
-                <Link to="/cities-we-serve" style={{ color: 'var(--primary-dark)', fontWeight: 700 }}>
-                  &rarr; All Cities We Serve (India &rarr; Tamil Nadu)
+                <Link to="/market-area" style={{ color: 'var(--primary-dark)', fontWeight: 700 }}>
+                  &rarr; All Cities We Serve (Market Area)
                 </Link>
                 <Link to="/" style={{ color: 'var(--text-primary)', fontWeight: 600 }}>
                   &larr; Back to Home

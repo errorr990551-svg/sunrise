@@ -41,7 +41,7 @@ export default function MarketArea() {
 
   return (
     <div className="market-area-page">
-      {/* Clean Light Breadcrumb & Header matching Image 1 */}
+      {/* Hero / Header Section matching Homepage theme */}
       <section className="market-header-section">
         <div className="container">
           <nav className="market-breadcrumb" aria-label="Breadcrumb">
@@ -51,6 +51,7 @@ export default function MarketArea() {
           </nav>
 
           <div className="market-title-wrap">
+            <span className="tagline-badge">Domestic &amp; Regional Supply</span>
             <h1 className="market-page-title">
               India Cities : We Serve
             </h1>
@@ -73,13 +74,14 @@ export default function MarketArea() {
         </div>
       </section>
 
-      {/* Main Grid of Tamil Nadu City Boxes matching Image 1 */}
+      {/* Main Grid of Tamil Nadu City Boxes */}
       <section className="market-content-section">
         <div className="container">
           {filteredData.map((group) => (
             <div key={group.state} className="market-state-block">
               <div className="market-state-header">
-                <h2 className="market-state-title">{group.state}</h2>
+                <span className="tagline-badge" style={{ margin: 0 }}>Active Industrial Corridor</span>
+                <h2 className="market-state-title" style={{ marginTop: '0.35rem' }}>{group.state}</h2>
               </div>
 
               <div className="market-city-grid">
@@ -91,6 +93,7 @@ export default function MarketArea() {
                     title={`View detailed engineering specifications for ${city.name}`}
                   >
                     <span className="market-city-name">{city.name}</span>
+                    <span className="market-city-badge">&rarr;</span>
                   </Link>
                 ))}
               </div>
@@ -106,25 +109,24 @@ export default function MarketArea() {
         </div>
       </section>
 
-      {/* Direct Quote / Dispatch Information Section */}
-      <section className="section section-light" id="quote-form">
-        <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-          <span className="tagline-badge">Ahmedabad Works Direct Dispatch</span>
-          <h2>Direct Factory Supply Across Tamil Nadu</h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', marginBottom: '1.5rem' }}>
-            Whether you need SS 304, SS 316, brass, or mild steel nipples in standard sizes or custom machined to your drawing, we dispatch directly to all industrial hubs in Tamil Nadu with full documentation.
-          </p>
-
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
-            <a href="tel:+916264131446" className="btn btn-primary btn-lg">
-              Call Factory: +91 62641 31446 <span className="btn-arrow">&rarr;</span>
-            </a>
-            <a href="mailto:sales@sunrise.industries" className="btn btn-outline btn-lg">
-              Email Sales RFQ
-            </a>
-            <a href="https://wa.me/916264131446" className="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
-              WhatsApp Us
-            </a>
+      {/* Direct Quote / Dispatch Information Section in Agri CTA style */}
+      <section className="section" id="quote-form">
+        <div className="container">
+          <div className="agri-cta-box">
+            <div className="agri-cta-text">
+              <h2>Direct Factory Supply Across Tamil Nadu &amp; All Over India</h2>
+              <p>
+                Stainless steel nipples, CNC precision fittings, and raw material stock dispatched directly from our Ahmedabad manufacturing facility to your city.
+              </p>
+            </div>
+            <div className="agri-cta-btns">
+              <a href="tel:+916264131446" className="agri-cta-btn-primary">
+                Call Factory: +91 62641 31446 &rarr;
+              </a>
+              <a href="/#nipple-range" className="agri-cta-btn-secondary">
+                View All Products &rarr;
+              </a>
+            </div>
           </div>
         </div>
       </section>

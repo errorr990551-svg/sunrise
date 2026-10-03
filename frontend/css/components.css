@@ -305,7 +305,6 @@
   overflow: hidden;
   height: 380px;
   box-shadow: var(--shadow-md);
-  group: relative;
 }
 
 .product-photo-card img {
@@ -1160,3 +1159,986 @@ textarea.form-control {
     padding: 1.5rem;
   }
 }
+
+/* ==========================================================================
+   HOMEPAGE CUSTOM REDESIGN COMPONENTS
+   ========================================================================== */
+
+/* 1. Industrial Fundamentals 2-Col */
+.fundamentals-two-col {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.fundamentals-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.fundamentals-photo-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+}
+
+.fundamentals-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(245, 166, 35, 0.2);
+}
+
+.fundamentals-photo-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: #fdfdfd;
+}
+
+.photo-caption-badge {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* 2. Product Range Split Header */
+.section-header-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.product-thumb-wrap {
+  width: 100%;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafbfc;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  overflow: hidden;
+  border: 1px solid #f1f3f5;
+}
+
+.product-thumb-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.feature-card:hover .product-thumb-wrap img {
+  transform: scale(1.08);
+}
+
+/* 3. Engineering Excellence with Video Holder */
+.engineering-split-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.engineering-content {
+  color: #ffffff;
+}
+
+.engineering-content h2 {
+  color: #ffffff;
+  font-size: 2.35rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.engineering-content p {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.video-holder-card {
+  position: relative;
+  background: linear-gradient(145deg, #1b2029 0%, #0d0f13 100%);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+}
+
+.video-screen {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 17, 21, 0.5);
+  backdrop-filter: blur(1px);
+}
+
+.video-play-btn {
+  position: relative;
+  z-index: 2;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #f5a623;
+  color: #16191e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 10px rgba(245, 166, 35, 0.25), 0 0 0 20px rgba(245, 166, 35, 0.12);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.video-play-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 14px rgba(245, 166, 35, 0.35), 0 0 0 28px rgba(245, 166, 35, 0.15);
+}
+
+.video-play-btn svg {
+  width: 26px;
+  height: 26px;
+  margin-left: 4px;
+  fill: #16191e;
+}
+
+.video-card-footer {
+  padding: 1.25rem 1.5rem;
+  background: #16191e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-info-title {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.video-duration-tag {
+  font-size: 0.78rem;
+  background: rgba(245, 166, 35, 0.15);
+  color: var(--primary);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* 4. Technical Data with proper borders and 2 product photos */
+.specs-split-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.specs-table-bordered {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.specs-table-bordered th,
+.specs-table-bordered td {
+  padding: 0.85rem 1.15rem;
+  border: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.specs-table-bordered th {
+  background-color: var(--dark-bg);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border-bottom: 3px solid var(--primary);
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+}
+
+.specs-table-bordered tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.specs-table-bordered tbody tr:hover {
+  background-color: #fff9ee;
+}
+
+.specs-photos-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.specs-photo-card {
+  background: #ffffff;
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.specs-photo-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.specs-photo-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: #f8fafc;
+}
+
+.specs-photo-card h4 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-top: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.specs-photo-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* 5. Buying Guide - How to get started in Iota Flow style */
+.iota-steps-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.iota-step-card {
+  background: #ffffff;
+  border: 1.5px solid var(--light-border);
+  border-radius: 12px;
+  padding: 2.25rem 1.6rem;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.iota-step-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(245, 166, 35, 0.16);
+}
+
+.iota-step-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.iota-step-num {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #cbd5e1;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.iota-step-card:hover .iota-step-num {
+  color: var(--primary);
+}
+
+.iota-step-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(245, 166, 35, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+}
+
+.iota-step-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.iota-step-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.iota-step-connector {
+  position: absolute;
+  top: 45px;
+  right: -20px;
+  font-size: 1.5rem;
+  color: var(--primary);
+  z-index: 2;
+  font-weight: 800;
+}
+
+/* 6. Metallurgy Guide Centered with proper table */
+.metallurgy-center-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.metallurgy-table-center {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-top: 1.5rem;
+}
+
+.metallurgy-table-center th,
+.metallurgy-table-center td {
+  padding: 1rem 1.25rem;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  font-size: 0.96rem;
+}
+
+.metallurgy-table-center th {
+  background: var(--dark-bg);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border-bottom: 3px solid var(--primary);
+}
+
+.metallurgy-table-center tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.metallurgy-table-center tbody tr:hover {
+  background-color: #fff9ee;
+}
+
+/* 7. Best Practices in Iota Flow Careers Style */
+.best-practices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.best-practice-card {
+  background: #ffffff;
+  border: 1px solid var(--light-border);
+  border-radius: 12px;
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.best-practice-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(245, 166, 35, 0.16);
+}
+
+.bp-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.15) 0%, rgba(245, 166, 35, 0.3) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.best-practice-title {
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.best-practice-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 8. Custom Fabrication: Photo Left, Content Right */
+.custom-fab-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.custom-fab-photo {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--primary);
+}
+
+.custom-fab-photo img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.custom-fab-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.custom-fab-content h2 {
+  font-size: 2.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.custom-fab-list {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.custom-fab-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.custom-fab-bullet {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* 9. Complementary Products Split */
+.complementary-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.complementary-photo-card {
+  background: #ffffff;
+  border: 1px solid var(--light-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.complementary-photo-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 12px 30px rgba(245, 166, 35, 0.18);
+}
+
+.complementary-photo-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  background: #fafbfc;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+}
+
+/* 10. Applications in Agrifutureindia Style */
+.agri-apps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 2.5rem;
+}
+
+.agri-app-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px 22px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+
+.agri-app-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.agri-app-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(16, 20, 26, 0.94) 0%, rgba(16, 20, 26, 0.55) 55%, rgba(16, 20, 26, 0.15) 100%);
+  z-index: 1;
+}
+
+.agri-app-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.agri-app-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.agri-app-title {
+  font-family: var(--font-heading);
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.agri-app-desc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.agri-app-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.agri-app-pill {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 4px 11px;
+}
+
+/* 11. Why Choose Us in Iota Flow Style with Arrow Indicators and Worker Photo */
+.why-choose-iota-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.why-choose-photo-side {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--primary);
+}
+
+.why-choose-photo-side img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.why-choose-badge-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(22, 25, 30, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  color: #ffffff;
+}
+
+.why-choose-badge-overlay strong {
+  color: var(--primary);
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.why-choose-flow-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.why-flow-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #ffffff;
+  border: 1px solid var(--light-border);
+  border-left: 4px solid var(--primary);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.why-flow-item:hover {
+  transform: translateX(6px);
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px rgba(245, 166, 35, 0.15);
+}
+
+.why-flow-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(245, 166, 35, 0.15);
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.why-flow-text h4 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.why-flow-text p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.why-flow-arrow {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: -0.5rem 0;
+}
+
+/* 12. How to Order in Agrifuture Installation, Delivery & Support Style */
+.agri-order-container {
+  background: linear-gradient(135deg, #16191e 0%, #1f2530 100%);
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  color: #ffffff;
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.agri-order-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem;
+}
+
+.agri-order-header h2 {
+  color: #ffffff;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.agri-order-header p {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+}
+
+.agri-order-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.agri-order-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  border-top: 2px solid rgba(245, 166, 35, 0.4);
+  padding-top: 1.75rem;
+}
+
+.agri-order-icon {
+  width: 46px;
+  height: 46px;
+  background: rgba(245, 166, 35, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.35rem;
+}
+
+.agri-order-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.agri-order-card p {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 13. Direct Factory Quotation in Agrifuture Bottom CTA Style */
+.agri-cta-box {
+  background: linear-gradient(135deg, #16191e 0%, #242a36 100%);
+  border: 1px solid rgba(245, 166, 35, 0.35);
+  border-radius: 24px;
+  padding: 3.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.agri-cta-box::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -10%;
+  width: 50%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(245, 166, 35, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.agri-cta-box::after {
+  content: '';
+  position: absolute;
+  bottom: -60%;
+  right: -10%;
+  width: 50%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(245, 166, 35, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.agri-cta-text {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.agri-cta-text h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3.5vw, 2.35rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.agri-cta-text p {
+  font-size: 1.08rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 620px;
+}
+
+.agri-cta-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 250px;
+  position: relative;
+  z-index: 1;
+}
+
+.agri-cta-btn-primary {
+  background: var(--primary);
+  color: #12151a !important;
+  padding: 13px 24px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(245, 166, 35, 0.35);
+}
+
+.agri-cta-btn-primary:hover {
+  background: #e09415;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(245, 166, 35, 0.5);
+}
+
+.agri-cta-btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff !important;
+  padding: 13px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.02rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+}
+
+.agri-cta-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN FOR NEW HOMEPAGE SECTIONS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .fundamentals-two-col,
+  .engineering-split-grid,
+  .specs-split-grid,
+  .custom-fab-grid,
+  .complementary-grid,
+  .why-choose-iota-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .iota-steps-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .iota-step-connector {
+    display: none;
+  }
+
+  .agri-apps-grid,
+  .best-practices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .agri-order-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .iota-steps-flow,
+  .agri-apps-grid,
+  .best-practices-grid,
+  .agri-order-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agri-cta-box {
+    flex-direction: column;
+    padding: 2.5rem 1.75rem;
+    text-align: center;
+  }
+
+  .agri-cta-btns {
+    width: 100%;
+  }
+
+  .agri-order-container {
+    padding: 3rem 1.5rem;
+  }
+}
+

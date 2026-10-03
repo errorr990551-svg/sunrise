@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import SharedContactBlock from './components/SharedContactBlock';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
@@ -26,9 +25,6 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
-
-      {/* Shared Contact Block at the end of every page */}
-      <SharedContactBlock />
 
       <Footer />
     </div>
