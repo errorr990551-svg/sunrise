@@ -224,29 +224,15 @@ export default function CityDetail() {
                 <a href="#quote-form" className="btn btn-primary btn-lg">
                   Request Custom {city.name} Order &rarr;
                 </a>
-                <a href="#quote-form" className="btn btn-outline-white btn-lg">
-                  Get Quote Now &rarr;
-                </a>
               </div>
             </div>
 
-            <div className="video-holder-card">
-              <div 
-                className="video-screen"
-                style={{ backgroundImage: `url('/assets/images/custom fabrication.png')` }}
-              >
-                <div className="video-play-btn" title="Watch Precision CNC Machining">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="video-card-footer">
-                <div className="video-info-title">
-                  <span>CNC Machining Shop &bull; Ahmedabad Works</span>
-                </div>
-                <span className="video-duration-tag">01:45 &bull; 1080p HD</span>
-              </div>
+            <div className="engineering-photo-card">
+              <img 
+                src="/assets/images/custom fabrication.png" 
+                alt={`Precision CNC Machining Facility for ${city.name} - Sunrise Industries`} 
+                loading="lazy" 
+              />
             </div>
           </div>
         </div>
@@ -581,7 +567,7 @@ export default function CityDetail() {
           <div className="agri-order-container">
             <div className="agri-order-header">
               <h2>From Ahmedabad to {city.name}: How It Works</h2>
-              <p>Direct dispatches with established road freight carriers across Tamil Nadu.</p>
+              <p>Direct dispatches with established road freight carriers across {city.stateName || 'Tamil Nadu'}.</p>
             </div>
 
             <div className="agri-order-grid">
@@ -636,7 +622,7 @@ export default function CityDetail() {
               <h4 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Neighbouring Industrial Supply Belts:</h4>
               <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', fontSize: '0.95rem' }}>
                 {city.neighbourLinks.map((nb) => (
-                  <Link key={nb.slug} to={`/tamil-nadu/${nb.slug}`} style={{ color: 'var(--primary-dark)', fontWeight: 600 }}>
+                  <Link key={nb.slug} to={nb.to || (city.stateName === 'Maharashtra' ? `/maharashtra/${nb.slug}` : `/tamil-nadu/${nb.slug}`)} style={{ color: 'var(--primary-dark)', fontWeight: 600 }}>
                     &rarr; {nb.name}
                   </Link>
                 ))}

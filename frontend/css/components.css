@@ -1182,11 +1182,12 @@ textarea.form-control {
 .fundamentals-photo-card {
   position: relative;
   background: #ffffff;
-  border: 1px solid var(--primary);
+  border: none;
   border-radius: var(--radius-md);
   padding: 1.25rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: var(--transition);
+  text-align: center;
 }
 
 .fundamentals-photo-card:hover {
@@ -1203,9 +1204,10 @@ textarea.form-control {
 }
 
 .photo-caption-badge {
-  display: inline-block;
+  display: block;
+  text-align: center;
   margin-top: 0.85rem;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--primary-dark);
   text-transform: uppercase;
@@ -1271,6 +1273,22 @@ textarea.form-control {
   font-size: 1.05rem;
   line-height: 1.75;
   margin-bottom: 2rem;
+}
+
+.engineering-photo-card {
+  position: relative;
+  background: linear-gradient(145deg, #1b2029 0%, #0d0f13 100%);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+.engineering-photo-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
 }
 
 .video-holder-card {

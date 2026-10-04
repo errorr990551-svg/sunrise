@@ -109,7 +109,7 @@ export default function Home() {
                 alt="Stainless Steel Pipe Fittings Collection - Sunrise Industries" 
                 loading="lazy"
               />
-              <span className="photo-caption-badge">Full Stainless Steel Fitting &amp; Joint Range</span>
+              <span className="photo-caption-badge">SS Nipple Range</span>
             </div>
           </div>
         </div>
@@ -235,29 +235,15 @@ export default function Home() {
                 <a href="#quote-form" className="btn btn-primary btn-lg">
                   Request Your Custom Order &rarr;
                 </a>
-                <a href="#quote-form" className="btn btn-outline-white btn-lg">
-                  Get Quote Now &rarr;
-                </a>
               </div>
             </div>
 
-            <div className="video-holder-card">
-              <div 
-                className="video-screen"
-                style={{ backgroundImage: `url('/assets/images/custom fabrication.png')` }}
-              >
-                <div className="video-play-btn" title="Watch CNC Lathe Machining Demonstration">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="video-card-footer">
-                <div className="video-info-title">
-                  <span>Precision CNC Machining Facility</span>
-                </div>
-                <span className="video-duration-tag">01:45 &bull; 1080p HD</span>
-              </div>
+            <div className="engineering-photo-card">
+              <img 
+                src="/assets/images/custom fabrication.png" 
+                alt="Precision CNC Machining Facility - Sunrise Industries" 
+                loading="lazy" 
+              />
             </div>
           </div>
         </div>
@@ -879,15 +865,6 @@ export default function Home() {
           </div>
 
           <FaqAccordion items={homeFaqs} />
-
-          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-              Have a custom thread question or need distributor bulk rates?
-            </p>
-            <a href="tel:+916264131446" className="btn btn-outline">
-              Call Our Engineers: +91 62641 31446 &rarr;
-            </a>
-          </div>
         </div>
       </section>
 

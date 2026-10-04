@@ -1,3 +1,5 @@
+import { maharashtraData } from './maharashtraData';
+
 export const citiesData = {
   chennai: {
     slug: 'chennai',
@@ -1130,3 +1132,5 @@ export const citiesData = {
     ]
   }
 };
+
+Object.assign(citiesData, maharashtraData);

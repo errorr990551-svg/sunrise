@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const marketData = [
   {
     state: 'TAMIL NADU',
+    stateSlug: 'tamil-nadu',
     cities: [
       { name: 'Chennai', slug: 'chennai' },
       { name: 'Coimbatore', slug: 'coimbatore' },
@@ -15,6 +16,22 @@ const marketData = [
       { name: 'Erode', slug: 'erode' },
       { name: 'Thoothukudi', slug: 'thoothukudi' },
       { name: 'Namakkal', slug: 'namakkal' }
+    ]
+  },
+  {
+    state: 'MAHARASHTRA',
+    stateSlug: 'maharashtra',
+    cities: [
+      { name: 'Mumbai', slug: 'mumbai' },
+      { name: 'Pune', slug: 'pune' },
+      { name: 'Nashik', slug: 'nashik' },
+      { name: 'Chhatrapati Sambhajinagar', slug: 'chhatrapati-sambhajinagar' },
+      { name: 'Nagpur', slug: 'nagpur' },
+      { name: 'Kolhapur', slug: 'kolhapur' },
+      { name: 'Thane', slug: 'thane' },
+      { name: 'Navi Mumbai', slug: 'navi-mumbai' },
+      { name: 'Solapur', slug: 'solapur' },
+      { name: 'Palghar', slug: 'palghar' }
     ]
   }
 ];
@@ -65,7 +82,7 @@ export default function MarketArea() {
           <div className="market-search-wrap">
             <input
               type="text"
-              placeholder="Search city (e.g. Coimbatore, Hosur, Chennai)..."
+              placeholder="Search city (e.g. Mumbai, Pune, Chennai, Coimbatore)..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="market-search-input"
@@ -74,7 +91,7 @@ export default function MarketArea() {
         </div>
       </section>
 
-      {/* Main Grid of Tamil Nadu City Boxes */}
+      {/* Main Grid of State City Boxes */}
       <section className="market-content-section">
         <div className="container">
           {filteredData.map((group) => (
@@ -88,7 +105,7 @@ export default function MarketArea() {
                 {group.cities.map((city) => (
                   <Link
                     key={city.name}
-                    to={`/tamil-nadu/${city.slug}`}
+                    to={`/${group.stateSlug}/${city.slug}`}
                     className="market-city-box"
                     title={`View detailed engineering specifications for ${city.name}`}
                   >
@@ -114,7 +131,7 @@ export default function MarketArea() {
         <div className="container">
           <div className="agri-cta-box">
             <div className="agri-cta-text">
-              <h2>Direct Factory Supply Across Tamil Nadu &amp; All Over India</h2>
+              <h2>Direct Factory Supply Across Maharashtra, Tamil Nadu &amp; All Over India</h2>
               <p>
                 Stainless steel nipples, CNC precision fittings, and raw material stock dispatched directly from our Ahmedabad manufacturing facility to your city.
               </p>
