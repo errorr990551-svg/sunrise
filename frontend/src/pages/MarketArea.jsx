@@ -33,6 +33,22 @@ const marketData = [
       { name: 'Solapur', slug: 'solapur' },
       { name: 'Palghar', slug: 'palghar' }
     ]
+  },
+  {
+    state: 'KARNATAKA',
+    stateSlug: 'karnataka',
+    cities: [
+      { name: 'Bengaluru', slug: 'bengaluru' },
+      { name: 'Mysuru', slug: 'mysuru' },
+      { name: 'Hubballi–Dharwad', slug: 'hubballi-dharwad' },
+      { name: 'Belagavi', slug: 'belagavi' },
+      { name: 'Mangaluru', slug: 'mangaluru' },
+      { name: 'Tumakuru', slug: 'tumakuru' },
+      { name: 'Ballari', slug: 'ballari' },
+      { name: 'Davanagere', slug: 'davanagere' },
+      { name: 'Kalaburagi', slug: 'kalaburagi' },
+      { name: 'Kolar', slug: 'kolar' }
+    ]
   }
 ];
 
@@ -82,7 +98,7 @@ export default function MarketArea() {
           <div className="market-search-wrap">
             <input
               type="text"
-              placeholder="Search city (e.g. Mumbai, Pune, Chennai, Coimbatore)..."
+              placeholder="Search city (e.g. Bengaluru, Mumbai, Pune, Chennai, Mysuru)..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="market-search-input"
@@ -131,7 +147,7 @@ export default function MarketArea() {
         <div className="container">
           <div className="agri-cta-box">
             <div className="agri-cta-text">
-              <h2>Direct Factory Supply Across Maharashtra, Tamil Nadu &amp; All Over India</h2>
+              <h2>Direct Factory Supply Across Karnataka, Maharashtra, Tamil Nadu &amp; All Over India</h2>
               <p>
                 Stainless steel nipples, CNC precision fittings, and raw material stock dispatched directly from our Ahmedabad manufacturing facility to your city.
               </p>

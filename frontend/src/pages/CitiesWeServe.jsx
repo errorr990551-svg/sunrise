@@ -114,27 +114,35 @@ export default function CitiesWeServe() {
                 </p>
               </div>
 
-              {/* Maharashtra - Coming Soon */}
-              <div className="state-tab-btn disabled-state">
+              {/* Maharashtra - ACTIVE */}
+              <button
+                type="button"
+                className={`state-tab-btn ${selectedState === 'maharashtra' ? 'active' : ''}`}
+                onClick={() => setSelectedState('maharashtra')}
+              >
                 <div className="state-tab-top">
                   <span className="state-name">Maharashtra</span>
-                  <span className="state-status-badge upcoming-badge">Coming Soon</span>
+                  <span className="state-status-badge active-badge">10 Cities Active</span>
                 </div>
                 <p className="state-tab-desc">
-                  Mumbai, Pune, Nashik, Aurangabad &amp; Nagpur industrial zones.
+                  Mumbai, Pune, Nashik, Chhatrapati Sambhajinagar &amp; Nagpur industrial zones.
                 </p>
-              </div>
+              </button>
 
-              {/* Karnataka - Coming Soon */}
-              <div className="state-tab-btn disabled-state">
+              {/* Karnataka - ACTIVE */}
+              <button
+                type="button"
+                className={`state-tab-btn ${selectedState === 'karnataka' ? 'active' : ''}`}
+                onClick={() => setSelectedState('karnataka')}
+              >
                 <div className="state-tab-top">
                   <span className="state-name">Karnataka</span>
-                  <span className="state-status-badge upcoming-badge">Coming Soon</span>
+                  <span className="state-status-badge active-badge">10 Cities Active</span>
                 </div>
                 <p className="state-tab-desc">
-                  Bengaluru, Belagavi, Hubballi &amp; Mangaluru manufacturing corridor.
+                  Bengaluru, Mysuru, Hubballi, Belagavi &amp; Mangaluru manufacturing corridor.
                 </p>
-              </div>
+              </button>
             </div>
           </div>
         </div>

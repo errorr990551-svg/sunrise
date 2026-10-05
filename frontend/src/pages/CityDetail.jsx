@@ -24,14 +24,12 @@ export default function CityDetail() {
       <div className="container" style={{ padding: '6rem 1rem', textAlign: 'center' }}>
         <h2>City Hub Not Found</h2>
         <p style={{ margin: '1.5rem 0', color: 'var(--text-muted)' }}>
-          Please select one of our active Tamil Nadu supply regions:
+          Please select one of our active industrial supply regions across India:
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          {Object.values(citiesData).map((c) => (
-            <Link key={c.slug} to={`/tamil-nadu/${c.slug}`} className="btn btn-outline btn-sm">
-              {c.name}
-            </Link>
-          ))}
+          <Link to="/market-area" className="btn btn-primary btn-sm">
+            View All Cities We Serve (Market Area) &rarr;
+          </Link>
         </div>
       </div>
     );
@@ -622,7 +620,11 @@ export default function CityDetail() {
               <h4 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Neighbouring Industrial Supply Belts:</h4>
               <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', fontSize: '0.95rem' }}>
                 {city.neighbourLinks.map((nb) => (
-                  <Link key={nb.slug} to={nb.to || (city.stateName === 'Maharashtra' ? `/maharashtra/${nb.slug}` : `/tamil-nadu/${nb.slug}`)} style={{ color: 'var(--primary-dark)', fontWeight: 600 }}>
+                  <Link 
+                    key={nb.slug} 
+                    to={nb.to || `/${nb.stateSlug || city.stateSlug || (city.stateName === 'Maharashtra' ? 'maharashtra' : (city.stateName === 'Karnataka' ? 'karnataka' : 'tamil-nadu'))}/${nb.slug}`} 
+                    style={{ color: 'var(--primary-dark)', fontWeight: 600 }}
+                  >
                     &rarr; {nb.name}
                   </Link>
                 ))}

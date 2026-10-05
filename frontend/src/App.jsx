@@ -23,6 +23,7 @@ export default function App() {
           <Route path="/cities-we-serve" element={<Navigate to="/market-area" replace />} />
           <Route path="/tamil-nadu/:citySlug" element={<CityDetail />} />
           <Route path="/maharashtra/:citySlug" element={<CityDetail />} />
+          <Route path="/karnataka/:citySlug" element={<CityDetail />} />
           <Route path="/:citySlug" element={<CityDetail />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
