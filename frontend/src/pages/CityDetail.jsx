@@ -19,6 +19,16 @@ export default function CityDetail() {
   const { citySlug } = useParams();
   const city = citiesData[citySlug];
 
+  React.useEffect(() => {
+    if (city) {
+      document.title = city.title || `${city.name} | Sunrise Industries`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && city.metaDescription) {
+        metaDesc.setAttribute('content', city.metaDescription);
+      }
+    }
+  }, [city]);
+
   if (!city) {
     return (
       <div className="container" style={{ padding: '6rem 1rem', textAlign: 'center' }}>
@@ -254,7 +264,7 @@ export default function CityDetail() {
                       <th style={{ width: '32%' }}>Application / Duty</th>
                       <th>Grade</th>
                       <th>Type</th>
-                      <th>Thread</th>
+                      <th>Thread / Wall</th>
                       <th>Engineering Note</th>
                     </tr>
                   </thead>
@@ -264,7 +274,7 @@ export default function CityDetail() {
                         <td><strong>{row.app}</strong></td>
                         <td><span className="badge badge-316">{row.grade}</span></td>
                         <td>{row.type}</td>
-                        <td>{row.thread}</td>
+                        <td>{row.thread || row.wall || 'BSPT / NPT'}</td>
                         <td>{row.note}</td>
                       </tr>
                     ))}
@@ -300,8 +310,8 @@ export default function CityDetail() {
         <div className="container">
           <div className="section-header text-center">
             <span className="tagline-badge">Buying Guide</span>
-            <h2>Four Questions to Ask Before You Order in {city.name}</h2>
-            <h3>Tailored specifically for {city.name}'s industrial conditions</h3>
+            <h2>{city.questionsTitle || `Questions to Ask Before You Order in ${city.name}`}</h2>
+            <h3>{city.questionsSubtitle || `Tailored specifically for ${city.name}'s industrial conditions`}</h3>
           </div>
 
           <div className="iota-steps-flow">
@@ -621,8 +631,8 @@ export default function CityDetail() {
               <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', fontSize: '0.95rem' }}>
                 {city.neighbourLinks.map((nb) => (
                   <Link 
-                    key={nb.slug} 
-                    to={nb.to || `/${nb.stateSlug || city.stateSlug || (city.stateName === 'Maharashtra' ? 'maharashtra' : (city.stateName === 'Karnataka' ? 'karnataka' : 'tamil-nadu'))}/${nb.slug}`} 
+                    key={nb.slug || nb.name} 
+                    to={nb.to || `/${nb.stateSlug || city.stateSlug || (city.stateName === 'Telangana' ? 'telangana' : (city.stateName === 'Maharashtra' ? 'maharashtra' : (city.stateName === 'Karnataka' ? 'karnataka' : 'tamil-nadu')))}/${nb.slug}`} 
                     style={{ color: 'var(--primary-dark)', fontWeight: 600 }}
                   >
                     &rarr; {nb.name}

@@ -49,6 +49,22 @@ const marketData = [
       { name: 'Kalaburagi', slug: 'kalaburagi' },
       { name: 'Kolar', slug: 'kolar' }
     ]
+  },
+  {
+    state: 'TELANGANA',
+    stateSlug: 'telangana',
+    cities: [
+      { name: 'Hyderabad', slug: 'hyderabad' },
+      { name: 'Medchal–Jeedimetla', slug: 'medchal-jeedimetla' },
+      { name: 'Sangareddy–Patancheru', slug: 'sangareddy-patancheru' },
+      { name: 'Shamshabad–Shadnagar', slug: 'shamshabad-shadnagar' },
+      { name: 'Warangal', slug: 'warangal' },
+      { name: 'Karimnagar', slug: 'karimnagar' },
+      { name: 'Nizamabad', slug: 'nizamabad' },
+      { name: 'Khammam–Kothagudem', slug: 'khammam-kothagudem' },
+      { name: 'Nalgonda–Suryapet', slug: 'nalgonda-suryapet' },
+      { name: 'Ramagundam–Peddapalli', slug: 'ramagundam-peddapalli' }
+    ]
   }
 ];
 
@@ -98,7 +114,7 @@ export default function MarketArea() {
           <div className="market-search-wrap">
             <input
               type="text"
-              placeholder="Search city (e.g. Bengaluru, Mumbai, Pune, Chennai, Mysuru)..."
+              placeholder="Search city (e.g. Hyderabad, Bengaluru, Mumbai, Pune, Chennai)..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="market-search-input"
@@ -147,7 +163,7 @@ export default function MarketArea() {
         <div className="container">
           <div className="agri-cta-box">
             <div className="agri-cta-text">
-              <h2>Direct Factory Supply Across Karnataka, Maharashtra, Tamil Nadu &amp; All Over India</h2>
+              <h2>Direct Factory Supply Across Telangana, Karnataka, Maharashtra, Tamil Nadu &amp; All Over India</h2>
               <p>
                 Stainless steel nipples, CNC precision fittings, and raw material stock dispatched directly from our Ahmedabad manufacturing facility to your city.
               </p>
