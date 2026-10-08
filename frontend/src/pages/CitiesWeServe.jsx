@@ -143,6 +143,21 @@ export default function CitiesWeServe() {
                   Bengaluru, Mysuru, Hubballi, Belagavi &amp; Mangaluru manufacturing corridor.
                 </p>
               </button>
+
+              {/* West Bengal - ACTIVE */}
+              <button
+                type="button"
+                className={`state-tab-btn ${selectedState === 'west-bengal' ? 'active' : ''}`}
+                onClick={() => setSelectedState('west-bengal')}
+              >
+                <div className="state-tab-top">
+                  <span className="state-name">West Bengal</span>
+                  <span className="state-status-badge active-badge">10 Cities Active</span>
+                </div>
+                <p className="state-tab-desc">
+                  Kolkata, Howrah, Haldia, Durgapur, Asansol &amp; Siliguri industrial corridor.
+                </p>
+              </button>
             </div>
           </div>
         </div>

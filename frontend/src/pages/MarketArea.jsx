@@ -65,6 +65,22 @@ const marketData = [
       { name: 'Nalgonda–Suryapet', slug: 'nalgonda-suryapet' },
       { name: 'Ramagundam–Peddapalli', slug: 'ramagundam-peddapalli' }
     ]
+  },
+  {
+    state: 'WEST BENGAL',
+    stateSlug: 'west-bengal',
+    cities: [
+      { name: 'Kolkata', slug: 'kolkata' },
+      { name: 'Howrah', slug: 'howrah' },
+      { name: 'Haldia', slug: 'haldia' },
+      { name: 'Durgapur', slug: 'durgapur' },
+      { name: 'Asansol–Raniganj', slug: 'asansol-raniganj' },
+      { name: 'Kharagpur–Midnapore', slug: 'kharagpur-midnapore' },
+      { name: 'Siliguri', slug: 'siliguri' },
+      { name: 'Hooghly–Serampore', slug: 'hooghly-serampore' },
+      { name: 'Bardhaman', slug: 'bardhaman' },
+      { name: 'Barrackpore–Kalyani', slug: 'barrackpore-kalyani' }
+    ]
   }
 ];
 
