@@ -8,6 +8,9 @@ import AboutUs from './pages/AboutUs';
 import CityDetail from './pages/CityDetail';
 import CitiesWeServe from './pages/CitiesWeServe';
 import MarketArea from './pages/MarketArea';
+import ProductDetail from './pages/ProductDetail';
+import CategoryDetail from './pages/CategoryDetail';
+import Products from './pages/Products';
 
 export default function App() {
   return (
@@ -21,6 +24,14 @@ export default function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/market-area" element={<MarketArea />} />
           <Route path="/cities-we-serve" element={<Navigate to="/market-area" replace />} />
+
+          {/* Product & Category Routes */}
+          <Route path="/products" element={<Products />} />
+          <Route path="/product" element={<Navigate to="/products" replace />} />
+          <Route path="/product/:productSlug" element={<ProductDetail />} />
+          <Route path="/product-category/:categorySlug" element={<CategoryDetail />} />
+
+          {/* Regional Market Routes */}
           <Route path="/tamil-nadu/:citySlug" element={<CityDetail />} />
           <Route path="/maharashtra/:citySlug" element={<CityDetail />} />
           <Route path="/karnataka/:citySlug" element={<CityDetail />} />
@@ -28,6 +39,7 @@ export default function App() {
           <Route path="/west-bengal/:citySlug" element={<CityDetail />} />
           <Route path="/madhya-pradesh/:citySlug" element={<CityDetail />} />
           <Route path="/:citySlug" element={<CityDetail />} />
+
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

@@ -125,9 +125,9 @@ export default function Home() {
               <h3 style={{ margin: 0 }}>Choose by how the joint is built, not just by size</h3>
             </div>
             <div>
-              <a href="#specifications" className="btn btn-outline">
+              <Link to="/products" className="btn btn-outline">
                 View All Products &rarr;
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -140,7 +140,7 @@ export default function Home() {
               <p className="feature-card-desc">
                 A hexagon in the middle lets you grip it with a spanner while tightening, so the thread seats properly without damaging the surface. Available as equal and reducing hex nipples.
               </p>
-              <a href="#quote-form" className="feature-card-btn">Click Here</a>
+              <Link to="/product/ss-hex-nipple" className="feature-card-btn">View Product &rarr;</Link>
             </div>
 
             <div className="feature-card">
@@ -151,7 +151,7 @@ export default function Home() {
               <p className="feature-card-desc">
                 Threaded at both ends with a plain, unthreaded section in the centre. That plain section gives you reach between fittings and a clean surface to hold during installation.
               </p>
-              <a href="#quote-form" className="feature-card-btn">Click Here</a>
+              <Link to="/product/ss-barrel-nipple" className="feature-card-btn">View Product &rarr;</Link>
             </div>
 
             <div className="feature-card">
@@ -162,7 +162,7 @@ export default function Home() {
               <p className="feature-card-desc">
                 Threaded along its entire length, so the fittings you connect sit almost touching. Ideal for tight spaces like compact manifolds, gauge clusters and skids.
               </p>
-              <a href="#quote-form" className="feature-card-btn">Click Here</a>
+              <Link to="/product/ss-close-nipple" className="feature-card-btn">View Product &rarr;</Link>
             </div>
 
             <div className="feature-card">
@@ -173,18 +173,18 @@ export default function Home() {
               <p className="feature-card-desc">
                 Different thread sizes on each end (e.g. ½" to ¾"). Used where a line steps up or down in size at pumps, valves or instrument ports without adding extra reducers.
               </p>
-              <a href="#quote-form" className="feature-card-btn">Click Here</a>
+              <Link to="/product/ss-reducing-nipple" className="feature-card-btn">View Product &rarr;</Link>
             </div>
 
             <div className="feature-card">
               <div className="product-thumb-wrap">
-                <img src="/assets/images/7a8533f9-c0ee-4957-8664-a72711dc71b7.png" alt="SS Hose Nipple" loading="lazy" />
+                <img src="/assets/images/Custom CNC Nipples.png" alt="SS Hose Nipple" loading="lazy" />
               </div>
               <h3 className="feature-card-title">SS Hose Nipple</h3>
               <p className="feature-card-desc">
                 A barbed or ribbed end that securely grips flexible hose, paired with a precision threaded end for the rigid connection. Common in water, air and utility hookups.
               </p>
-              <a href="#quote-form" className="feature-card-btn">Click Here</a>
+              <Link to="/product/ss-hose-nipple" className="feature-card-btn">View Product &rarr;</Link>
             </div>
 
             <div className="feature-card">
@@ -195,18 +195,18 @@ export default function Home() {
               <p className="feature-card-desc">
                 Special lengths, mixed thread combinations, non-standard hex across-flats sizes and drawing-specific parts machined to precise engineering tolerances.
               </p>
-              <a href="#quote-form" className="feature-card-btn">Click Here</a>
+              <Link to="/product/ss-long-nipple" className="feature-card-btn">View Product &rarr;</Link>
             </div>
 
             <div className="feature-card">
               <div className="product-thumb-wrap">
-                <img src="/assets/images/nipples-range.jpg" alt="MS & Brass Nipples" loading="lazy" />
+                <img src="/assets/images/SS Close Nipple.png" alt="MS Nipples" loading="lazy" />
               </div>
-              <h3 className="feature-card-title">MS &amp; Brass Nipples</h3>
+              <h3 className="feature-card-title">MS &amp; Carbon Steel Nipples</h3>
               <p className="feature-card-desc">
-                Mild steel nipples for dry, painted, low-cost structural lines. Brass nipples for water, gas and electrical hardware where non-sparking or malleability is required.
+                Mild steel nipples in black phosphated and hot-dip galvanised finishes for water, air, fire sprinkler and structural lines.
               </p>
-              <a href="#quote-form" className="feature-card-btn">Click Here</a>
+              <Link to="/product-category/ms-nipples" className="feature-card-btn">View Category &rarr;</Link>
             </div>
           </div>
 

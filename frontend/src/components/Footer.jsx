@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="footer-links">
             <Link to="/">Home</Link>
             <Link to="/about-us">About Us</Link>
-            <a href="/#nipple-range">Products</a>
+            <Link to="/products">Products Catalog</Link>
             <a href="#footer-contact">Contact</a>
             <Link to="/market-area">Market Area</Link>
           </div>
@@ -34,12 +34,12 @@ export default function Footer() {
         <div className="footer-col">
           <h4>SS Nipples</h4>
           <div className="footer-links">
-            <a href="/#nipple-range">SS Hex Nipple</a>
-            <a href="/#nipple-range">SS Barrel Nipple</a>
-            <a href="/#nipple-range">SS Close Nipple</a>
-            <a href="/#nipple-range">SS Reducing Nipple</a>
-            <a href="/#nipple-range">SS Hose Nipple</a>
-            <a href="/#nipple-range">Custom CNC Nipples</a>
+            <Link to="/product/ss-hex-nipple">SS Hex Nipple</Link>
+            <Link to="/product/ss-barrel-nipple">SS Barrel Nipple</Link>
+            <Link to="/product/ss-close-nipple">SS Close Nipple</Link>
+            <Link to="/product/ss-reducing-nipple">SS Reducing Nipple</Link>
+            <Link to="/product/ss-hose-nipple">SS Hose Nipple</Link>
+            <Link to="/product-category/ss-nipples">View All SS Nipples &rarr;</Link>
           </div>
         </div>
 
