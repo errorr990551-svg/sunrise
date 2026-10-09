@@ -632,7 +632,7 @@ export default function CityDetail() {
                 {city.neighbourLinks.map((nb) => (
                   <Link 
                     key={nb.slug || nb.name} 
-                    to={nb.to || `/${nb.stateSlug || city.stateSlug || (city.stateName === 'Telangana' ? 'telangana' : (city.stateName === 'Maharashtra' ? 'maharashtra' : (city.stateName === 'Karnataka' ? 'karnataka' : 'tamil-nadu')))}/${nb.slug}`} 
+                    to={nb.to || `/${nb.stateSlug || city.stateSlug || (city.stateName === 'Madhya Pradesh' ? 'madhya-pradesh' : (city.stateName === 'West Bengal' ? 'west-bengal' : (city.stateName === 'Telangana' ? 'telangana' : (city.stateName === 'Maharashtra' ? 'maharashtra' : (city.stateName === 'Karnataka' ? 'karnataka' : 'tamil-nadu')))))}/${nb.slug}`} 
                     style={{ color: 'var(--primary-dark)', fontWeight: 600 }}
                   >
                     &rarr; {nb.name}

@@ -158,6 +158,21 @@ export default function CitiesWeServe() {
                   Kolkata, Howrah, Haldia, Durgapur, Asansol &amp; Siliguri industrial corridor.
                 </p>
               </button>
+
+              {/* Madhya Pradesh - ACTIVE */}
+              <button
+                type="button"
+                className={`state-tab-btn ${selectedState === 'madhya-pradesh' ? 'active' : ''}`}
+                onClick={() => setSelectedState('madhya-pradesh')}
+              >
+                <div className="state-tab-top">
+                  <span className="state-name">Madhya Pradesh</span>
+                  <span className="state-status-badge active-badge">10 Cities Active</span>
+                </div>
+                <p className="state-tab-desc">
+                  Indore, Pithampur, Bhopal, Jabalpur, Gwalior, Dewas &amp; Singrauli industrial hubs.
+                </p>
+              </button>
             </div>
           </div>
         </div>
@@ -215,7 +230,7 @@ export default function CitiesWeServe() {
                 </div>
 
                 <div className="city-box-bottom">
-                  <Link to={`/tamil-nadu/${city.slug}`} className="btn btn-primary btn-block">
+                  <Link to={`/${city.stateSlug || 'tamil-nadu'}/${city.slug}`} className="btn btn-primary btn-block">
                     View {city.name} Data &amp; Specs &rarr;
                   </Link>
                 </div>
