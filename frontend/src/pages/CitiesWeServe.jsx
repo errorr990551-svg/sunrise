@@ -173,6 +173,21 @@ export default function CitiesWeServe() {
                   Indore, Pithampur, Bhopal, Jabalpur, Gwalior, Dewas &amp; Singrauli industrial hubs.
                 </p>
               </button>
+
+              {/* Andhra Pradesh - ACTIVE */}
+              <button
+                type="button"
+                className={`state-tab-btn ${selectedState === 'andhra-pradesh' ? 'active' : ''}`}
+                onClick={() => setSelectedState('andhra-pradesh')}
+              >
+                <div className="state-tab-top">
+                  <span className="state-name">Andhra Pradesh</span>
+                  <span className="state-status-badge active-badge">10 Cities Active</span>
+                </div>
+                <p className="state-tab-desc">
+                  Visakhapatnam, Vijayawada, Guntur, Kakinada, Tirupati, Sri City &amp; Kurnool hubs.
+                </p>
+              </button>
             </div>
           </div>
         </div>

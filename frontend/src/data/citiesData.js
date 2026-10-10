@@ -3,6 +3,7 @@ import { karnatakaData } from './karnatakaData';
 import { telanganaData } from './telanganaData';
 import { westBengalData } from './westBengalData';
 import { madhyaPradeshData } from './madhyaPradeshData';
+import { andhraPradeshData } from './andhraPradeshData';
 
 export const citiesData = {
   chennai: {
@@ -1142,3 +1143,4 @@ Object.assign(citiesData, karnatakaData);
 Object.assign(citiesData, telanganaData);
 Object.assign(citiesData, westBengalData);
 Object.assign(citiesData, madhyaPradeshData);
+Object.assign(citiesData, andhraPradeshData);
