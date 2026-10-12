@@ -211,16 +211,47 @@ export default function ProductDetail() {
               {/* Quick Spec Highlights Card */}
               <div className="quick-specs-summary-card">
                 <div className="spec-item">
-                  <span className="spec-label">Sizes Available:</span>
-                  <span className="spec-val">{product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('size'))?.details || '1/8" to 4" NB'}</span>
+                  <span className="spec-label">
+                    {product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('size')) ? 'Sizes Available:' :
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('diameter')) ? 'Diameter Range:' :
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thickness')) ? 'Thickness Range:' : 'Dimensions:'}
+                  </span>
+                  <span className="spec-val">
+                    {product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('size'))?.details ||
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('diameter'))?.details ||
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thickness'))?.details ||
+                     'Standard & Custom'}
+                  </span>
                 </div>
                 <div className="spec-item">
-                  <span className="spec-label">Thread Standards:</span>
-                  <span className="spec-val">BSPT, BSPP, NPT (ASME B1.20.1)</span>
+                  <span className="spec-label">
+                    {product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thread')) ? 'Thread Standards:' :
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('finish')) ? 'Finish / Surface:' :
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('pattern')) ? 'Pattern Options:' :
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('standard')) ? 'Standard:' : 'Finishing:'}
+                  </span>
+                  <span className="spec-val">
+                    {product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thread'))?.details ||
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('finish'))?.details ||
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('pattern'))?.details ||
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('standard'))?.details ||
+                     'Mill / CNC Finished'}
+                  </span>
                 </div>
                 <div className="spec-item">
-                  <span className="spec-label">Wall Schedule:</span>
-                  <span className="spec-val">SCH 40, SCH 80, Heavy Wall</span>
+                  <span className="spec-label">
+                    {product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('schedule')) ? 'Wall Schedule:' :
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thickness')) ? 'Thickness Gauge:' :
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('process')) ? 'Process / Method:' :
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('tolerance')) ? 'Tolerance:' : 'Supply Form:'}
+                  </span>
+                  <span className="spec-val">
+                    {product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('schedule'))?.details ||
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thickness'))?.details ||
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('process'))?.details ||
+                     product.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('tolerance'))?.details ||
+                     'Stock & Cut to Size'}
+                  </span>
                 </div>
                 <div className="spec-item">
                   <span className="spec-label">Dispatch:</span>

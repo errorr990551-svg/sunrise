@@ -155,10 +155,24 @@ export default function CategoryDetail() {
 
                     <div className="card-specs-row">
                       <span className="spec-badge">
-                        Size: {prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('size'))?.details || '1/8" to 4"'}
+                        {prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('size'))
+                          ? `Size: ${prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('size'))?.details}`
+                          : prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thickness'))
+                          ? `Thick: ${prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thickness'))?.details}`
+                          : prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('diameter'))
+                          ? `Dia: ${prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('diameter'))?.details}`
+                          : `Spec: ${prod.technicalSpecs?.[1]?.details || 'Custom'}`}
                       </span>
                       <span className="spec-badge">
-                        Threads: {prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thread'))?.details || 'BSP / NPT'}
+                        {prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thread'))
+                          ? `Threads: ${prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('thread'))?.details}`
+                          : prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('finish'))
+                          ? `Finish: ${prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('finish'))?.details}`
+                          : prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('pattern'))
+                          ? `Pattern: ${prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('pattern'))?.details}`
+                          : prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('standard'))
+                          ? `Std: ${prod.technicalSpecs?.find(s => s.parameter.toLowerCase().includes('standard'))?.details}`
+                          : `Quality: Premium`}
                       </span>
                     </div>
 

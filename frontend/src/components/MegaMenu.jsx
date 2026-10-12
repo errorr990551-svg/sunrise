@@ -2,6 +2,65 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { categoriesData, productsData } from '../data/productsData';
 
+// Curated compact metadata badges to keep cards neat and uniform like SS Nipples
+const COMPACT_SPEC_MAP = {
+  // Custom Metal Manufacturing
+  'custom-metal-fabrication': 'SS, MS, Brass & Al',
+  'prototype-development': '1 to 50 pcs typical',
+  'mass-production': 'High volume runs',
+  'sheet-metal-fabrication': '0.5 mm to 6 mm',
+  'laser-cutting': 'Up to 25 mm plate',
+  'press-components': '10T to 150T press',
+  'welding-fabrication': 'TIG, MIG & Arc',
+  'surface-finishing-polishing': 'Satin, mirror & matte',
+  
+  // CNC Machining Services
+  'cnc-turning': '2 mm to 150 mm dia',
+  'cnc-milling': 'Up to 600 mm travel',
+  'cnc-machined-components': 'Turning & milling',
+  'vmc-machining': 'Precision VMC',
+  'cnc-drilling': '1 mm to 50 mm hole',
+  'cnc-thread-cutting': 'BSP, NPT, Metric',
+  'precision-shafts-bushes': '3 mm to 150 mm dia',
+  'multi-axis-cnc-machining': 'Multi-axis CNC',
+  'custom-cnc-fasteners': '2 mm to 60 mm dia',
+
+  // SS Sheets & Circles
+  'ss-304-sheet': '0.5 mm to 6 mm',
+  'ss-316-sheet': '0.5 mm to 6 mm',
+  'ss-perforated-sheet': 'Round & hex holes',
+  'ss-circle': '50 mm to 1200 mm',
+  'ss-chequered-plate': 'Tear & diamond pattern',
+  'ss-plate': '6 mm to 50 mm',
+  'ss-coil': 'Slit & wide coils',
+  'ss-decorative-sheet': 'Gold, mirror & PVD',
+  'ss-shim-sheet': '0.05 mm to 1 mm',
+
+  // Brass Parts
+  'brass-turned-parts': 'CW614N & IS 319',
+  'brass-fittings': 'BSP & NPT threads',
+  'brass-bushes': 'Plain & flanged',
+  'brass-nuts': 'Hex & lock nuts',
+  'brass-washers': 'Plain & spring',
+  'brass-inserts': 'Knurled threaded',
+  'brass-cable-glands': 'IP68 certified',
+  'brass-terminals': 'Electrical & earth'
+};
+
+function getCompactSpec(product) {
+  if (!product) return '';
+  if (COMPACT_SPEC_MAP[product.slug]) {
+    return COMPACT_SPEC_MAP[product.slug];
+  }
+  const raw = product.technicalSpecs?.[1]?.details || product.technicalSpecs?.[0]?.details || 'Custom Specifications';
+  if (raw.length > 26) {
+    const firstPart = raw.split(',')[0].trim();
+    if (firstPart.length <= 26) return firstPart;
+    return raw.slice(0, 24) + '...';
+  }
+  return raw;
+}
+
 export default function MegaMenu({ isOpen, onClose }) {
   const [activeCategorySlug, setActiveCategorySlug] = useState('ss-nipples');
 
@@ -92,7 +151,7 @@ export default function MegaMenu({ isOpen, onClose }) {
                   <div className="product-card-info">
                     <h4 className="product-card-title">{product.name}</h4>
                     <span className="product-card-meta">
-                      {product.technicalSpecs?.[1]?.details || 'BSP & NPT Threads'}
+                      {getCompactSpec(product)}
                     </span>
                   </div>
                   <span className="product-card-chevron">&rarr;</span>
