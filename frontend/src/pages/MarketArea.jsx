@@ -113,6 +113,22 @@ const marketData = [
       { name: 'Anantapur–Hindupur', slug: 'anantapur-hindupur' },
       { name: 'Eluru–Bhimavaram', slug: 'eluru-bhimavaram' }
     ]
+  },
+  {
+    state: 'ODISHA',
+    stateSlug: 'odisha',
+    cities: [
+      { name: 'Bhubaneswar', slug: 'bhubaneswar' },
+      { name: 'Cuttack', slug: 'cuttack' },
+      { name: 'Rourkela–Sundargarh', slug: 'rourkela-sundargarh' },
+      { name: 'Jharsuguda–Sambalpur', slug: 'jharsuguda-sambalpur' },
+      { name: 'Angul–Talcher', slug: 'angul-talcher' },
+      { name: 'Paradip–Jagatsinghpur', slug: 'paradip-jagatsinghpur' },
+      { name: 'Kalinganagar–Jajpur', slug: 'kalinganagar-jajpur' },
+      { name: 'Keonjhar–Joda–Barbil', slug: 'keonjhar-joda-barbil' },
+      { name: 'Balasore–Bhadrak', slug: 'balasore-bhadrak' },
+      { name: 'Rayagada–Koraput', slug: 'rayagada-koraput' }
+    ]
   }
 ];
 
@@ -211,7 +227,7 @@ export default function MarketArea() {
         <div className="container">
           <div className="agri-cta-box">
             <div className="agri-cta-text">
-              <h2>Direct Factory Supply Across Andhra Pradesh, Madhya Pradesh, West Bengal, Telangana, Karnataka, Maharashtra, Tamil Nadu &amp; All Over India</h2>
+              <h2>Direct Factory Supply Across Odisha, Andhra Pradesh, Madhya Pradesh, West Bengal, Telangana, Karnataka, Maharashtra, Tamil Nadu &amp; All Over India</h2>
               <p>
                 Stainless steel nipples, CNC precision fittings, and raw material stock dispatched directly from our Ahmedabad manufacturing facility to your city.
               </p>

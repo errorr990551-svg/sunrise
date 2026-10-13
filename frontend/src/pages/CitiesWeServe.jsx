@@ -188,6 +188,21 @@ export default function CitiesWeServe() {
                   Visakhapatnam, Vijayawada, Guntur, Kakinada, Tirupati, Sri City &amp; Kurnool hubs.
                 </p>
               </button>
+
+              {/* Odisha - ACTIVE */}
+              <button
+                type="button"
+                className={`state-tab-btn ${selectedState === 'odisha' ? 'active' : ''}`}
+                onClick={() => setSelectedState('odisha')}
+              >
+                <div className="state-tab-top">
+                  <span className="state-name">Odisha</span>
+                  <span className="state-status-badge active-badge">10 Cities Active</span>
+                </div>
+                <p className="state-tab-desc">
+                  Bhubaneswar, Cuttack, Rourkela, Jharsuguda, Paradip &amp; Angul industrial hubs.
+                </p>
+              </button>
             </div>
           </div>
         </div>
